@@ -1,0 +1,2 @@
+.gh-header{margin-bottom:4vmin;text-align:center}.gh-header>*{grid-column:wide-start/wide-end}.gh-feature-image{width:100%;max-width:800px;margin:30px auto 0}@media (max-width:800px){.gh-feature-image{grid-column:full-start/full-end}}.gh-post-meta{display:block;margin:.5rem 0 0;font-size:1.3rem;letter-spacing:.5px;text-transform:uppercase;color:var(--color-grey);font-weight:500}
+/*# sourceMappingURL=_post.css.map */

@@ -1,0 +1,192 @@
+@import './_vars.css';
+
+@import './_reset.css';
+@import './_type.css';
+
+@import './_post.css';
+@import './_content.css';
+
+
+
+
+/* Grid 
+/* ---------------------------------------------------------- */
+
+.gh-canvas {
+    display: grid;
+    grid-template-columns:
+        [full-start]
+          minmax(calc(calc(100% - 800px) / 2), 1fr)
+            [wide-start]
+                auto
+                    [main-start]
+                        600px
+                    [main-end]
+                auto
+            [wide-end]
+          minmax(calc(calc(100% - 800px) / 2), 1fr)
+        [full-end]
+    ;
+}
+
+@media (max-width: 800px) {
+    .gh-canvas {
+        grid-template-columns:
+            [full-start]
+            4vmin
+                [wide-start]
+                    0
+                        [main-start]
+                            auto
+                        [main-end]
+                    0
+                [wide-end]
+            4vmin
+            [full-end]
+        ;
+    }
+}
+
+
+/* Main 
+/* ---------------------------------------------------------- */
+
+.gh-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.gh-head {
+    padding: 6vmin 0 30px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gh-head a {
+    display: inline-block;
+    color: currentColor;
+    text-decoration: none;
+}
+
+ul.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem 0 0 0;
+    padding: 0 0 30px 0;
+    border-bottom: var(--color-border) 1px solid;
+}
+
+ul.nav a {
+    margin: 0 1vmin;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+ul.nav a:hover {
+    color: var(--ghost-accent-color);
+}
+
+ul.nav li.nav-current a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+
+/* Index
+/* ---------------------------------------------------------- */
+
+.gh-postfeed .post {
+    display: block;
+    padding: 1vmin 0;
+}
+
+.gh-postfeed .post span {
+    color: var(--ghost-accent-color);
+    text-decoration: underline;
+}
+
+
+/* Author Archive
+/* ---------------------------------------------------------- */
+
+.gh-author-image {
+    height: 12vmin;
+    width: 12vmin;
+    margin: 0 auto 1.5em;
+    border-radius: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.gh-author-meta {
+    margin: 2vmin 0 0 0;
+    font-size: 1.2em;
+}
+
+.gh-author-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gh-author-links a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0.75vmin;
+}
+
+.gh-author-links a + a:before {
+    display: block;
+    content: "";
+    margin: 0 1.25vmin 0 0;
+    height: 1em;
+    width: 1px;
+    background: rgba(0,0,0,0.3);
+    transform: rotate(20deg);
+}
+
+@media (max-width: 700px) {
+    .gh-author-meta {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+
+
+
+/* Site Footer
+/* ---------------------------------------------------------- */
+
+.page-footer {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 4vmin;
+    margin: 40px auto 0;
+    border-top: var(--color-border) 1px solid;
+    text-align: center;
+}
+
+
+
+
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
