@@ -20,6 +20,7 @@
 
 .gh-content > * + * {
     margin-top: 4vmin;
+    margin-top: 1.7em;
 }
 
 .gh-content > [id] + * {
@@ -40,11 +41,7 @@
 .gh-content > ul,
 .gh-content > dl,
 .gh-content > p {
-    font-weight: 300;
-    font-size: 1.7rem;
-    line-height: 1.55em;
-    -webkit-font-smoothing: auto;
-    -moz-osx-font-smoothing: auto;
+    /* Nothing for now */
 }
 
 .gh-content > ul,

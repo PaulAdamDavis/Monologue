@@ -1,6 +1,9 @@
 @import './_vars.css';
 
 @import './_reset.css';
+
+@import './_main.css';
+
 @import './_type.css';
 
 @import './_header.css';

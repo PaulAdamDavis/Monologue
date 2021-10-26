@@ -1,9 +1,13 @@
 .gh-head {
     padding: 6vmin 0 30px;
     width: 100%;
-    max-width: 600px;
     margin: 0 auto;
     text-align: center;
+    background-image: linear-gradient(to bottom,#d7d7d7, white);
+}
+
+.gh-head p {
+    opacity: 0.5;
 }
 
 .gh-head a {
@@ -12,17 +16,16 @@
     text-decoration: none;
 }
 
-ul.nav {
+.gh-nav {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     margin: 1rem 0 0 0;
     padding: 0 0 30px 0;
-    border-bottom: var(--color-border) 1px solid;
 }
 
-ul.nav a {
+.gh-nav a {
     margin: 0 1vmin;
     padding: 5px;
     text-transform: uppercase;
@@ -30,11 +33,11 @@ ul.nav a {
     font-weight: 500;
 }
 
-ul.nav a:hover {
+.gh-nav a:hover {
     color: var(--ghost-accent-color);
 }
 
-ul.nav li.nav-current a {
+.gh-nav li.nav-current a {
     text-decoration: underline;
     text-underline-offset: 2px;
 }
