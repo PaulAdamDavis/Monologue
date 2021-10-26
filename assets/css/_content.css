@@ -106,7 +106,7 @@
     .gh-content blockquote {
         padding-left: 0;
     }
-    
+
     .gh-content blockquote::before {
         left: -4vmin;
     }
@@ -264,6 +264,7 @@
     display: inline-block;
     width: 16px;
     height: 16px;
+    margin-right: 10px;
 }
 
 .kg-bookmark-thumbnail {
