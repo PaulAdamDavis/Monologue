@@ -1,4 +1,4 @@
-/* Grid 
+/* Grid
 /* ---------------------------------------------------------- */
 
 .gh-canvas {
@@ -37,13 +37,24 @@
 }
 
 
-/* Main 
+/* Main
 /* ---------------------------------------------------------- */
 
 .gh-container {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+}
+
+.gh-padded {
+    padding-left: var(--margin);
+    padding-right: var(--margin);
+}
+
+.gh-container.gh-padded {
+    max-width: calc(600px + calc(var(--margin) * 2));
+    padding-left: var(--margin);
+    padding-right: var(--margin);
 }
 
 .page-footer {

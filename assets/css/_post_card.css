@@ -5,17 +5,11 @@
 
 .post-card a {
     color: var(--color-base);
-
-    display: flex;
-    align-items: flex-start;
 }
 
 .post-card-image {
     display: block;
-    margin-bottom: 1em;
     margin-top: 0.2em; /* Counteracts the whitespace from the x-height in most fonts */
-    max-width: 160px;
-    margin-right: 1.5em;
     flex-shrink: 0;
 }
 
@@ -37,4 +31,24 @@
 
 .post-card-excerpt {
 
+}
+
+
+@media (max-width: 500px) {
+    .post-card-image {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+}
+
+@media (min-width: 501px) {
+    .post-card a {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .post-card-image {
+        width: 160px;
+        margin-right: 1.5em;
+    }
 }
