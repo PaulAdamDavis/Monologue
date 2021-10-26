@@ -7,8 +7,6 @@
 @import './_content.css';
 
 
-
-
 /* Grid 
 /* ---------------------------------------------------------- */
 
@@ -160,8 +158,26 @@ ul.nav li.nav-current a {
 }
 
 
+.gh-pagination {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 4vmin 0;
+    margin: 40px auto 0;
+    border-top: var(--color-border) 1px solid;
+    text-align: center;
+}
 
+.gh-pagination .newer-posts {
+    margin-right: 1em;
+}
 
+.gh-pagination .older-posts {
+    margin-left: 1em;
+}
+
+.gh-pagination a {
+    color: var(--ghost-accent-color);
+}
 
 
 
