@@ -1,0 +1,67 @@
+/* Grid 
+/* ---------------------------------------------------------- */
+
+.gh-canvas {
+    display: grid;
+    grid-template-columns:
+        [full-start]
+          minmax(calc(calc(100% - 800px) / 2), 1fr)
+            [wide-start]
+                auto
+                    [main-start]
+                        600px
+                    [main-end]
+                auto
+            [wide-end]
+          minmax(calc(calc(100% - 800px) / 2), 1fr)
+        [full-end]
+    ;
+}
+
+@media (max-width: 800px) {
+    .gh-canvas {
+        grid-template-columns:
+            [full-start]
+            4vmin
+                [wide-start]
+                    0
+                        [main-start]
+                            auto
+                        [main-end]
+                    0
+                [wide-end]
+            4vmin
+            [full-end]
+        ;
+    }
+}
+
+
+/* Main 
+/* ---------------------------------------------------------- */
+
+.gh-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.page-footer {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 4vmin;
+    margin: 40px auto 0;
+    border-top: var(--color-border) 1px solid;
+    text-align: center;
+}
+
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

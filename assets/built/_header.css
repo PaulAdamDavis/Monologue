@@ -1,0 +1,2 @@
+.gh-head{padding:6vmin 0 30px;width:100%;max-width:600px;margin:0 auto;text-align:center}.gh-head a{display:inline-block;color:currentColor;text-decoration:none}ul.nav{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;margin:1rem 0 0;padding:0 0 30px;border-bottom:1px solid var(--color-border)}ul.nav a{margin:0 1vmin;padding:5px;text-transform:uppercase;font-size:1.3rem;font-weight:500}ul.nav a:hover{color:var(--ghost-accent-color)}ul.nav li.nav-current a{text-decoration:underline;text-underline-offset:2px}
+/*# sourceMappingURL=_header.css.map */
