@@ -1,6 +1,10 @@
 .gh-postfeed .post {
     display: block;
-    padding: 1vmin 0;
+    /* padding: 1em 0; */
+}
+
+.gh-postfeed .post:nth-child(n+2) {
+    margin-top: 2em;
 }
 
 .gh-postfeed .post span {

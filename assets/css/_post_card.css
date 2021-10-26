@@ -1,0 +1,40 @@
+.post-card {
+    border-top: 1px solid var(--color-border);
+    padding-top: 2em;
+}
+
+.post-card a {
+    color: var(--color-base);
+
+    display: flex;
+    align-items: flex-start;
+}
+
+.post-card-image {
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 0.2em; /* Counteracts the whitespace from the x-height in most fonts */
+    max-width: 160px;
+    margin-right: 1.5em;
+    flex-shrink: 0;
+}
+
+.post-card-text {
+    flex-grow: 2;
+}
+
+.post-card-date {
+    display: block;
+    opacity: 0.5;
+}
+
+.post-card-title {
+    font-size: inherit;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: var(--ghost-accent-color);
+}
+
+.post-card-excerpt {
+
+}
