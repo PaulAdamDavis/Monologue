@@ -69,6 +69,30 @@
             "xl": {
                 "width": 2000
             }
+        },
+        "custom": {
+            "show_author": {
+                "type": "boolean",
+                "default": true
+            },
+            "feed_layout": {
+                "type": "select",
+                "options": ["Left thumbnail", "Large thumbnail", "Text-only"],
+                "default": "Left thumbnail",
+                "group": "homepage"
+            },
+            "feed_display": {
+                "type": "select",
+                "options": ["Minimal", "Boxed"],
+                "default": "Minimal",
+                "group": "homepage"
+            },
+            "post_image_width": {
+                "type": "select",
+                "options": ["Wide", "Full", "Small"],
+                "default": "Wide",
+                "group": "post"
+            }
         }
     }
 }

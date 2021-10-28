@@ -22,4 +22,5 @@
     --margin: 2rem;
     --radius: 0.5rem;
 
+    --content-margin: calc(4vmin + 1em);
 }

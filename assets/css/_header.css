@@ -1,5 +1,5 @@
 .gh-head {
-    padding-top: 6vmin;
+    padding-top: var(--content-margin);
     padding-bottom: 30px;
     width: 100%;
     margin: 0 auto;

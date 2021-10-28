@@ -1,15 +1,24 @@
-<article class="post-card {{post_class}}">
+<article class="post-card {{post_class}} {{#match @custom.feed_layout "==" "Left thumbnail"}}post-card-left-thumbnail{{/match}} {{#match @custom.feed_layout "==" "Large thumbnail"}}post-card-large-thumbnail{{/match}} {{#match @custom.feed_display "==" "Boxed"}}post-card-display-boxed{{/match}}">
     <a class="post-card-link" href="{{url}}">
-        {{#if feature_image}}
-            <img class="post-card-image"
-                src="{{img_url feature_image size="2"}}"
-                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                loading="lazy"
-            />
-        {{/if}}
+        {{#match @custom.feed_layout "!=" "Text-only"}}
+            {{#if feature_image}}
+                <img class="post-card-image"
+                    src="{{img_url feature_image size="2"}}"
+                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    loading="lazy"
+                />
+            {{/if}}
+        {{/match}}
+
+        {{!-- <img class="gh-feature-image {{#match @custom.post_image_width "Full"}}image-full{{else match @custom.post_image_width "=" "Small"}}image-small{{/match}}" --}}
 
         <div class="post-card-text">
-            <time class="post-card-date small-caps" datetime="{{date format="YYYY-MM-DD"}}">{{date format="Mo MMMM, YYYY"}}</time>
+            <div class="post-card-meta small-caps">
+                {{#if @custom.show_author}}
+                    {{primary_author.name}} &mdash;
+                {{/if}}
+                <time class="post-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="Mo MMMM, YYYY"}}</time>
+            </div>
             <h2 class="post-card-title">{{title}}</h2>
             <div class="post-card-excerpt">
                 <p>{{excerpt}}</p>

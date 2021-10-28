@@ -2,13 +2,16 @@
 
 {{#post}}
 
-<header class="gh-header gh-canvas">
-    <h1>{{title}}</h1>
+<header class="gh-post-header gh-canvas">
+    <h1 class="gh-post-title">{{title}}</h1>
     <div class="gh-post-meta">
-        {{primary_author.name}} - <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+        {{#if @custom.show_author}}
+            {{primary_author.name}} &mdash;
+        {{/if}}
+        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="Mo MMMM, YYYY"}}</time>
     </div>
     {{#if feature_image}}
-    <img class="gh-feature-image"
+    <img class="gh-feature-image {{#match @custom.post_image_width "Full"}}image-full{{else match @custom.post_image_width "=" "Small"}}image-small{{/match}}"
         srcset="{{img_url feature_image size="s"}} 300w,
                 {{img_url feature_image size="m"}} 600w,
                 {{img_url feature_image size="l"}} 1000w,
