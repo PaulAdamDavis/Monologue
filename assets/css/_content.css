@@ -95,14 +95,6 @@
 }
 
 @media (max-width: 650px) {
-    .gh-content blockquote,
-    .gh-content ol,
-    .gh-content ul,
-    .gh-content dl,
-    .gh-content p {
-        font-size: 1.6rem;
-    }
-
     .gh-content blockquote {
         padding-left: 0;
     }
@@ -116,13 +108,18 @@
 /* Content cards
 /* ---------------------------------------------------------- */
 
+.gh-content code {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 80%;
+    line-height: 1.8;
+}
+
 .gh-content :not(pre) code {
     vertical-align: middle;
     padding: 0.15em 0.4em 0.15em;
     border: #e1eaef 1px solid;
-    font-weight: 400 !important;
-    font-size: 0.9em;
-    line-height: 1em;
+    line-height: 1;
     color: #dc0050;
     background: #f0f6f9;
     border-radius: 0.25em;
@@ -130,10 +127,21 @@
 
 .gh-content > pre {
     overflow: scroll;
-    padding: 16px 20px;
-    background: rgba(255,255,255,0.8);
+    padding: 0.8em 1.2em;
+    background: #1a1a1a;
+    color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
+    white-space: pre;
+}
+
+.gh-content > pre ::selection {
+    background-color: #444;
+}
+
+.gh-content > pre code {
+    display: block;
+    font-size: 75%;
 }
 
 .gh-content * + .kg-card,
