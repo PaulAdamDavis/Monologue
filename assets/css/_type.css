@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    color: #273033;
+    color: var(--color-text);
     font-family: var(--font-sans-serif);
     font-size: 1.6rem;
     font-size: clamp(1.6rem, calc(1.8 / 80 * 100vw), 1.8rem);
@@ -26,16 +26,16 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid var(--color-border);
-    /* opacity: 0.2; */
 }
 
 ::selection {
     text-shadow: none;
-    background: #cbeafb;
+    background: var(--color-selection);
+    color: var(--color-selection-text);
 }
 
 mark {
-    background-color: #fdffb6;
+    background-color: var(--color-highlight);
 }
 
 small {
@@ -132,11 +132,6 @@ b {
     font-weight: 500;
 }
 
-pre {
+pre {}
 
-}
-
-code {
-    /* font-family: var(--font-mono); */
-    /* font-size: 90%; */
-}
+code {}

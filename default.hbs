@@ -10,6 +10,14 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
+    {{!-- dark_mode_accent_color --}}
+
+    <style>
+        :root {
+            --custom_dark_mode_accent_color: {{@custom.dark_mode_accent_color}};
+        }
+    </style>
+
 </head>
 <body class="{{body_class}}">
 

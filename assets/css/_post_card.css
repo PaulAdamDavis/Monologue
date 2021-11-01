@@ -5,7 +5,7 @@
 
 .post-card-link {
     display: block;
-    color: var(--color-base);
+    color: var(--color-text);
 }
 
 .post-card-image {

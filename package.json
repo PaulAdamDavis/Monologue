@@ -75,6 +75,10 @@
                 "type": "boolean",
                 "default": true
             },
+            "dark_mode_accent_color": {
+                "type": "color",
+                "default": "#4983cf"
+            },
             "feed_layout": {
                 "type": "select",
                 "options": ["Left thumbnail", "Large thumbnail", "Text-only"],

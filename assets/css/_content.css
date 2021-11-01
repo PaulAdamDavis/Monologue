@@ -118,18 +118,18 @@
 .gh-content :not(pre) code {
     vertical-align: middle;
     padding: 0.15em 0.4em 0.15em;
-    border: #e1eaef 1px solid;
+    border: var(--color-inline-code-border) 1px solid;
     line-height: 1;
-    color: #dc0050;
-    background: #f0f6f9;
+    color: var(--color-inline-code-text);
+    background: var(--color-inline-code-bg);
     border-radius: 0.25em;
 }
 
 .gh-content > pre {
     overflow: scroll;
     padding: 0.8em 1.2em;
-    background: #1a1a1a;
-    color: #fff;
+    background: var(--color-code-block-bg);
+    color: var(--color-code-block-text);
     border-radius: 5px;
     box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
     white-space: pre;
@@ -218,7 +218,7 @@
     flex-wrap: wrap;
     flex-direction: row-reverse;
     color: currentColor;
-    background: rgba(255,255,255,0.6);
+    background: var(--color-bookmark-bg);
     font-family: var(--font-sans-serif);
     text-decoration: none;
     border-radius: 5px;

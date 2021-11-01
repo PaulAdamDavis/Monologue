@@ -4,7 +4,7 @@
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    background-image: linear-gradient(to bottom,#d7d7d7, white);
+    background-image: linear-gradient(to bottom,var(--color-grad-top), var(--color-background));
 }
 
 .gh-head p {
