@@ -215,7 +215,6 @@
 .kg-bookmark-container,
 .kg-bookmark-container:hover {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row-reverse;
     color: currentColor;
     background: var(--color-bookmark-bg);
@@ -227,10 +226,10 @@
 }
 
 .kg-bookmark-content {
-    flex-basis: 0;
-    flex-grow: 999;
     padding: 20px;
     order: 1;
+    width: 75%;
+    word-break: break-word;
 }
 
 .kg-bookmark-title {
@@ -281,10 +280,10 @@
 }
 
 .kg-bookmark-thumbnail {
+    order: 2;
+    width: 25%;
     display: flex;
-    flex-basis: 24rem;
-    flex-grow: 1;
-    justify-content: flex-end;
+    min-width: 120px;
 }
 
 .kg-bookmark-thumbnail img {
