@@ -1,4 +1,4 @@
-<article class="post-card {{post_class}} {{#match @custom.feed_layout "==" "Left thumbnail"}}post-card-left-thumbnail{{/match}} {{#match @custom.feed_layout "==" "Large thumbnail"}}post-card-large-thumbnail{{/match}} {{#match @custom.feed_display "==" "Boxed"}}post-card-display-boxed{{/match}}">
+<article class="post-card {{post_class}} {{#match @custom.feed_layout "==" "Left thumbnail"}}post-card-left-thumbnail{{/match}} {{#match @custom.feed_layout "==" "Large thumbnail"}}post-card-large-thumbnail{{/match}}">
     <a class="post-card-link" href="{{url}}">
         {{#match @custom.feed_layout "!=" "Text-only"}}
             {{#if feature_image}}
@@ -9,8 +9,6 @@
                 />
             {{/if}}
         {{/match}}
-
-        {{!-- <img class="gh-feature-image {{#match @custom.post_image_width "Full"}}image-full{{else match @custom.post_image_width "=" "Small"}}image-small{{/match}}" --}}
 
         <div class="post-card-text">
             <div class="post-card-meta small-caps">

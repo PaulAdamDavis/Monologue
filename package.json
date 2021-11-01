@@ -81,12 +81,6 @@
                 "default": "Left thumbnail",
                 "group": "homepage"
             },
-            "feed_display": {
-                "type": "select",
-                "options": ["Minimal", "Boxed"],
-                "default": "Minimal",
-                "group": "homepage"
-            },
             "post_image_width": {
                 "type": "select",
                 "options": ["Wide", "Full", "Small"],

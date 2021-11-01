@@ -6,7 +6,7 @@
     <h1 class="gh-post-title">{{title}}</h1>
     <div class="gh-post-meta">
         {{#if @custom.show_author}}
-            {{primary_author.name}} &mdash;
+            <a href="{{primary_author.url}}">{{primary_author.name}}</a> &mdash;
         {{/if}}
         <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="Mo MMMM, YYYY"}}</time>
     </div>

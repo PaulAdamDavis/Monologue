@@ -3,10 +3,6 @@
 }
 
 .gh-postfeed .post-card:nth-child(n+2) {
-    margin-top: 2em;
-}
-
-.gh-postfeed .post-card-display-boxed:nth-child(n+2) {
     margin-top: 3em;
 }
 

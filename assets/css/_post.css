@@ -23,6 +23,10 @@
     font-weight: 500;
 }
 
+.gh-post-meta a {
+    color: inherit;
+}
+
 .gh-feature-image {
     width: 100%;
     margin: var(--content-margin) auto 0;
