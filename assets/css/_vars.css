@@ -22,18 +22,28 @@
 
     /* Fonts */
     --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    --font-serif: Georgia, serif;
+    --font-serif: Lora, serif;
     --font-mono: Menlo, Courier, monospace, monospace;
 
     /* Sizes */
     --height: 4rem;
     --margin: 2rem;
     --radius: 0.5rem;
-
-    --content-margin: calc(4vmin + 1em);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (max-width: 899px) {
+    :root {
+        --content-margin: calc(2vmin + 1em);
+    }
+}
+
+@media (min-width: 900px) {
+    :root {
+        --content-margin: calc(4vmin + 1em);
+    }
+}
+
+/* @media (prefers-color-scheme: dark) {
     :root {
 
         --color-background: #111111;
@@ -54,4 +64,4 @@
         --ghost-accent-color: var(--custom_dark_mode_accent_color);
 
     }
-}
+} */

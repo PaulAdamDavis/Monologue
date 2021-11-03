@@ -3,7 +3,9 @@
 }
 
 .gh-postfeed .post-card:nth-child(n+2) {
-    margin-top: 3em;
+    border-top: 1px solid var(--color-border);
+    padding-top: calc(var(--content-margin) * 2);
+    margin-top: calc(var(--content-margin) * 2);
 }
 
 .gh-postfeed .post span {
@@ -11,12 +13,7 @@
     text-decoration: underline;
 }
 
-
-
-
-
-
-
+/*
 .gh-author-image {
     height: 12vmin;
     width: 12vmin;
@@ -59,18 +56,16 @@
         font-size: 1.6rem;
     }
 }
-
-
-
+*/
 
 
 
 .gh-pagination {
     width: 100%;
-    max-width: 600px;
-    padding: 40px var(--margin) 0;
-    margin: 40px auto 0;
+    padding: 40px 0;
+    margin: calc(var(--content-margin) * 2) auto 0;
     border-top: var(--color-border) 1px solid;
+    border-bottom: var(--color-border) 1px solid;
     text-align: center;
 }
 
@@ -84,4 +79,27 @@
 
 .gh-pagination a {
     color: var(--ghost-accent-color);
+}
+
+
+
+body.tag-template .post-card-content ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+body.tag-template .post-card-content ol li {
+    padding-left: 0;
+}
+
+body.tag-template .post-card-content ol li:nth-child(n+2) {
+    margin-top: 1em;
+}
+
+body.tag-template .post-card-content li time {
+    opacity: 0.5;
+}
+
+body.tag-template .post-card-content li a:not(:hover) {
+    color: inherit
 }

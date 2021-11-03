@@ -1,0 +1,26 @@
+{{!< default}}
+
+<div class="gh-container gh-padded">
+    <div class="gh-postfeed">
+        <article class="post-card">
+            <div class="post-card-text">
+                {{#tag}}
+                    <div class="post-card-meta small-caps">
+                        A collection of {{plural ../pagination.total empty='zero posts' singular='% post' plural='% posts'}}
+                    </div>
+                    <h2 class="post-card-title">{{name}}</h2>
+
+                    <div class="gh-content post-card-content">
+                        <ol>
+                            {{#get "posts" limit="all" filter="tag:{{slug}}"}}
+                                {{#foreach posts}}
+                                    <li><time class="small-caps" datetime="{{date format="YYYY-MM-DD"}}">{{date format="Mo MMMM, YYYY"}}</time> <br><a href="{{url}}">{{title}}</a></li>
+                                {{/foreach}}
+                            {{/get}}
+                        </ol>
+                    </div>
+                {{/tag}}
+            </div>
+        </article>
+    </div>
+</div>

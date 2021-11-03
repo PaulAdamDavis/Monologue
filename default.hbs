@@ -21,58 +21,66 @@
 </head>
 <body class="{{body_class}}">
 
-<header class="gh-head">
-    <a href="{{@site.url}}">
-        {{#if @site.logo}}
-            <img class="site-logo" src="{{img_url @site.logo absolute="true"}}" height="50" alt="{{@site.title}}" />
-        {{else}}
-            <h2>{{@site.title}}</h2>
-        {{/if}}
-    </a>
+    <div class="outer-wrapper">
+        <header class="gh-head">
+            <div class="inner">
+                <a href="{{@site.url}}">
+                    {{#if @site.logo}}
+                        <img class="site-logo" src="{{img_url @site.logo absolute="true"}}" height="50" alt="{{@site.title}}" />
+                    {{else}}
+                        <h2>{{@site.title}}</h2>
+                    {{/if}}
+                </a>
 
-    {{#if @site.description}}
-        <p>{{@site.description}}</p>
-    {{/if}}
+                {{#if @site.description}}
+                    <p>{{@site.description}}</p>
+                {{/if}}
 
-    {{navigation}}
-</header>
+                <input type="checkbox" id="gh-nav-toggle" class="gh-nav-toggle">
+                <label for="gh-nav-toggle" class="gh-nav-toggle-faux">
+                    <svg viewBox="0 0 70 46">
+                        <rect width="70" height="6"></rect>
+                        <rect y="20" width="70" height="6"></rect>
+                        <rect y="40" width="70" height="6"></rect>
+                    </svg>
+                </label>
 
-<main>
-    {{{body}}}
-</main>
+                <div class="gh-nav">
+                    {{navigation}}
+                    {{navigation type="secondary"}}
+                </div>
+            </div>
+        </header>
 
-<footer class="page-footer">
-    <a href="https://ghost.org" target="_blank" rel="noopener">Publish with Ghost</a>
-</footer>
+        <main>
+            {{{body}}}
+        </main>
+    </div>
 
-{{ghost_foot}}
+    <footer class="page-footer">
+        <a href="https://ghost.org" target="_blank" rel="noopener">Publish with Ghost</a>
+    </footer>
+
+    {{ghost_foot}}
+
 </body>
 </html>
-
-
 
 <script>
     (function(window, document, undefined) {
         "use strict";
 
-        // List of Video Vendors embeds you want to support
         var players = ['iframe[src*="youtube.com"]', 'iframe[src*="vimeo.com"]'];
-
-        // Select videos
         var fitVids = document.querySelectorAll(players.join(","));
 
-        // If there are videos on the page...
         if (fitVids.length) {
-            // Loop through videos
             for (var i = 0; i < fitVids.length; i++) {
-                // Get Video Information
                 var fitVid = fitVids[i];
                 var width = fitVid.getAttribute("width");
                 var height = fitVid.getAttribute("height");
                 var aspectRatio = height / width;
                 var parentDiv = fitVid.parentNode;
 
-                // Wrap it in a DIV
                 var div = document.createElement("div");
                 div.className = "fitVids-wrapper";
                 div.style.paddingBottom = aspectRatio * 100 + "%";
@@ -80,10 +88,24 @@
                 fitVid.remove();
                 div.appendChild(fitVid);
 
-                // Clear height/width from fitVid
                 fitVid.removeAttribute("height");
                 fitVid.removeAttribute("width");
             }
         }
+    })(window, document);
+
+    (function (window, document) {
+        var resizeImagesInGalleries = function resizeImagesInGalleries() {
+            var images = document.querySelectorAll('.kg-gallery-image img');
+            images.forEach(function (image) {
+                var container = image.closest('.kg-gallery-image');
+                var width = image.attributes.width.value;
+                var height = image.attributes.height.value;
+                var ratio = width / height;
+                container.style.flex = ratio + ' 1 0%';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', resizeImagesInGalleries);
     })(window, document);
 </script>

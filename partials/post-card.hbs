@@ -1,26 +1,34 @@
-<article class="post-card {{post_class}} {{#match @custom.feed_layout "==" "Left thumbnail"}}post-card-left-thumbnail{{/match}} {{#match @custom.feed_layout "==" "Large thumbnail"}}post-card-large-thumbnail{{/match}}">
-    <a class="post-card-link" href="{{url}}">
-        {{#match @custom.feed_layout "!=" "Text-only"}}
-            {{#if feature_image}}
-                <img class="post-card-image"
-                    src="{{img_url feature_image size="2"}}"
-                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                    loading="lazy"
-                />
-            {{/if}}
-        {{/match}}
-
-        <div class="post-card-text">
+<article class="post-card {{post_class}}">
+    <div class="post-card-text">
+        {{^is "page"}}
             <div class="post-card-meta small-caps">
                 {{#if @custom.show_author}}
                     {{primary_author.name}} &mdash;
                 {{/if}}
                 <time class="post-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="Mo MMMM, YYYY"}}</time>
             </div>
+        {{/is}}
+
+        {{#is "post"}}
             <h2 class="post-card-title">{{title}}</h2>
-            <div class="post-card-excerpt">
-                <p>{{excerpt}}</p>
-            </div>
+        {{else}}
+            <h2 class="post-card-title"><a href="{{url}}">{{title}}</a></h2>
+        {{/is}}
+
+        {{#if custom_excerpt}}
+            <p class="post-card-excerpt">{{excerpt}}</p>
+        {{/if}}
+
+        {{#if feature_image}}
+            <img class="post-card-image"
+                src="{{img_url feature_image size="2"}}"
+                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                loading="lazy"
+            />
+        {{/if}}
+
+        <div class="gh-content post-card-content">
+            <p>{{content}}</p>
         </div>
-    </a>
+    </div>
 </article>

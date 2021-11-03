@@ -86,9 +86,10 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: var(--font-serif);
     margin: 0;
     line-height: 1.15em;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h1 {
@@ -98,7 +99,7 @@ h1 {
 
 h2 {
     font-size: 2.6rem;
-    font-size: clamp(2.6rem, calc(4 / 80 * 100vw), 4rem);
+    font-size: clamp(2.6rem, calc(4.4 / 80 * 100vw), 4.4rem);
 }
 
 h3 {
