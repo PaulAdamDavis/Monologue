@@ -46,7 +46,7 @@ body {
 
 @media (max-width: 899px) {
     body {
-        background-image: none;
+        background-size: 100% 150px;
     }
 
     .outer-wrapper {

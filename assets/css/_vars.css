@@ -43,7 +43,7 @@
     }
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
 
         --color-background: #111111;
@@ -64,4 +64,4 @@
         --ghost-accent-color: var(--custom_dark_mode_accent_color);
 
     }
-} */
+}

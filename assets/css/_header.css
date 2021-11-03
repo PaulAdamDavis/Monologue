@@ -41,6 +41,10 @@
     right: 0;
 }
 
+.gh-nav-toggle + .gh-nav-toggle-faux svg {
+   fill: var(--color-text);
+}
+
 .gh-nav-toggle:checked + .gh-nav-toggle-faux {
     opacity: 0.25;
 }
