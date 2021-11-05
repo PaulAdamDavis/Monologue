@@ -12,6 +12,21 @@ body {
 }
 
 
+/* Main wrapper element
+/* ---------------------------------------------------------- */
+
+.outer-wrapper {
+    width: 100%;
+    max-width: calc(1200px + (var(--content-margin) * 2));
+    padding-left: var(--content-margin);
+    padding-right: var(--content-margin);
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    padding-top: var(--content-margin);
+}
+
+
 /* Grid
 /* ---------------------------------------------------------- */
 
@@ -66,9 +81,9 @@ body {
 }
 
 .gh-container.gh-padded {
-    max-width: calc(600px + calc(var(--margin) * 2));
-    padding-left: var(--margin);
-    padding-right: var(--margin);
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
 }
 
 .page-footer {
