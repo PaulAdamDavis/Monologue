@@ -11,7 +11,6 @@
     --color-selection-text: #000;
     --color-text: #273033;
     --color-text-alt: #848e95;
-    --color-grad-top: #d7d7d7;
     --color-code-clock-bg: #1a1a1a;
     --color-code-clock-text: #fff;
     --color-inline-code-border: #e1eaef;
@@ -51,7 +50,6 @@
         --color-selection: #224558;
         --color-selection-text: #fff;
         --color-text: #dfdfdf;
-        --color-grad-top: #0a0a0a;
         --color-code-block-bg: #000000;
         --color-code-block-text: #d3d3d3;
         --color-inline-code-border: #3c3c3c;
