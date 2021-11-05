@@ -22,7 +22,7 @@
 
     /* Fonts */
     --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    --font-serif: Lora, serif;
+    --font-serif: 'Lora', serif;
     --font-mono: Menlo, Courier, monospace, monospace;
 
     /* Sizes */
