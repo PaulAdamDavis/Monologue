@@ -14,7 +14,7 @@
                         <ol>
                             {{#get "posts" limit="all" filter="tag:{{slug}}"}}
                                 {{#foreach posts}}
-                                    <li><time class="small-caps" datetime="{{date format="YYYY-MM-DD"}}">{{date format="Mo MMMM, YYYY"}}</time> <br><a href="{{url}}">{{title}}</a></li>
+                                    <li><time class="small-caps" datetime="{{date format="YYYY-MM-DD"}}">{{date format="Do MMMM, YYYY"}}</time> <br><a href="{{url}}">{{title}}</a></li>
                                 {{/foreach}}
                             {{/get}}
                         </ol>
