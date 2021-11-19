@@ -3,7 +3,11 @@
 <div class="gh-container gh-padded">
     <div class="gh-postfeed">
         {{#foreach posts visibility="all"}}
-            {{> "post-card"}}
+            {{#match @custom.post_index_style "Small"}}
+                {{> "post-card-small"}}
+            {{else}}
+                {{> "post-card"}}
+            {{/match}}
         {{/foreach}}
     </div>
 </div>

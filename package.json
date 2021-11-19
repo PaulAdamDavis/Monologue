@@ -79,11 +79,10 @@
                 "type": "color",
                 "default": "#4983cf"
             },
-            "post_image_width": {
+            "post_index_style": {
                 "type": "select",
-                "options": ["Wide", "Full", "Small"],
-                "default": "Wide",
-                "group": "post"
+                "options": ["Full", "Small"],
+                "default": "Full"
             }
         }
     }
