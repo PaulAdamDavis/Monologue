@@ -52,16 +52,16 @@
         "posts_per_page": 5,
         "image_sizes": {
             "xxs": {
-                "width": 30
+                "width": 80
             },
             "xs": {
-                "width": 100
+                "width": 200
             },
             "s": {
-                "width": 300
+                "width": 400
             },
             "m": {
-                "width": 600
+                "width": 800
             },
             "l": {
                 "width": 1200

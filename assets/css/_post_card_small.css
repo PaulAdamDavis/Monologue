@@ -1,7 +1,7 @@
 .gh-postfeed .post-card-small:nth-child(n+2) {
     border-top: 1px solid var(--color-border);
-    padding-top: calc(var(--content-margin) / 2);
-    margin-top: calc(var(--content-margin) / 2);
+    padding-top: 2em;
+    margin-top: 1.5em;
 }
 
 .post-card-small {
@@ -11,17 +11,39 @@
 .post-card-small-inner {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 500px) {
+    .post-card-small-inner {
+        flex-wrap: nowrap;
+    }
 }
 
 .post-card-small-image {
-    order: -1;
-    width: 140px;
-    margin-right: 20px;
-    flex-shrink: 0;
+    width: 100%;
+    margin-bottom: 0.3em;
+}
+
+@media (min-width: 500px) {
+    .post-card-small-image {
+        width: 30vw;
+        max-width: 140px;
+        margin-bottom: 0;
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
 }
 
 .post-card-small-text {
+    width: 100%;
     flex-grow: 2;
+}
+
+@media (min-width: 500px) {
+    .post-card-small-text {
+
+    }
 }
 
 .post-card-small-meta {

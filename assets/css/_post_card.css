@@ -6,11 +6,21 @@
 }
 
 .post-card-image {
-    display: block;
     flex-shrink: 0;
-    width: 100%;
     margin-bottom: 1em;
     margin-right: 0;
+}
+
+.post-card-image img {
+    width: 100%;
+    display: block;
+}
+
+.post-card-image figcaption {
+    text-align: center;
+    font-size: 70%;
+    opacity: 0.75;
+    margin-top: 0.5em;
 }
 
 .post-card-text {
