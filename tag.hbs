@@ -5,12 +5,26 @@
         <article class="post-card">
             <div class="post-card-text">
                 {{#tag}}
+
+                    {{#if feature_image}}
+                        <figure class="post-card-image">
+                            <img src="{{img_url feature_image size="l"}}"
+                                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                            />
+                        </figure>
+                    {{/if}}
+
                     <div class="post-card-meta small-caps">
                         A collection of {{plural ../pagination.total empty='zero posts' singular='% post' plural='% posts'}}
                     </div>
                     <h2 class="post-card-title">{{name}}</h2>
 
+                    {{#if description}}
+                        <p class="post-card-excerpt">{{description}}</p>
+                    {{/if}}
+
                     <div class="gh-content post-card-content">
+                        <hr>
                         <ol>
                             {{#get "posts" limit="all" filter="tag:{{slug}}"}}
                                 {{#foreach posts}}
