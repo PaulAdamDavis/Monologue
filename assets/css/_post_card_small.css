@@ -61,6 +61,15 @@
     transition: opacity 0.3s ease;
 }
 
+/* Trim the excerpt if it not explicitly defined */
+.post-card-small.no-custom-excerpt .post-card-small-excerpt {
+    display: -webkit-box;
+    overflow-y: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+}
+
 .post-card-small a:hover .post-card-small-title {
     color: var(--ghost-accent-color);
 }
