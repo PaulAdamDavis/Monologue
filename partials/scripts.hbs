@@ -64,3 +64,32 @@
         opacity: 0.9;
     }
 </style>
+
+<script>
+    function theme() {
+        const html = document.documentElement;
+        const toggle = document.querySelector('.js-theme-toggle');
+
+        const setTheme = (type = 'system') => {
+            html.classList.remove('theme-dark', 'theme-system', 'theme-light');
+            html.classList.add(`theme-${type}`);
+            localStorage.setItem('monologue_theme', type);
+            toggle.innerText = toggle.getAttribute(`data-${type}-label`);
+        }
+
+        setTheme(localStorage.getItem('monologue_theme') || undefined);
+
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            if (!html.classList.contains('theme-dark') && !html.classList.contains('theme-light')) {
+                setTheme('dark');
+            } else if (html.classList.contains('theme-dark')) {
+                setTheme('light');
+            } else {
+                setTheme('system');
+            }
+        });
+    }
+    theme();
+</script>

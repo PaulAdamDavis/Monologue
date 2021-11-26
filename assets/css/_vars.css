@@ -30,21 +30,26 @@
     --radius: 0.5rem;
 }
 
-@media (max-width: 899px) {
-    :root {
-        --content-margin: calc(2vmin + 1em);
-    }
-}
+html.theme-dark {
+    --color-background: #111111;
+    --color-highlight: #fdffb6;
+    --color-selection: #224558;
+    --color-selection-text: #fff;
+    --color-text: #dfdfdf;
+    --color-code-block-bg: #000000;
+    --color-code-block-text: #d3d3d3;
+    --color-inline-code-border: #3c3c3c;
+    --color-inline-code-text: #c97292;
+    --color-inline-code-bg: #222222;
+    --color-bookmark-bg: #222;
+    --color-border: #383838;
 
-@media (min-width: 900px) {
-    :root {
-        --content-margin: calc(4vmin + 1em);
-    }
+    --color-primary: var(--custom_dark_mode_accent_color);
+    --ghost-accent-color: var(--custom_dark_mode_accent_color);
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-
+    html:not(.theme-light):root {
         --color-background: #111111;
         --color-highlight: #fdffb6;
         --color-selection: #224558;
@@ -60,6 +65,17 @@
 
         --color-primary: var(--custom_dark_mode_accent_color);
         --ghost-accent-color: var(--custom_dark_mode_accent_color);
+    }
+}
 
+@media (max-width: 899px) {
+    :root {
+        --content-margin: calc(2vmin + 1em);
+    }
+}
+
+@media (min-width: 900px) {
+    :root {
+        --content-margin: calc(4vmin + 1em);
     }
 }
