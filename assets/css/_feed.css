@@ -36,23 +36,23 @@
 
 
 
-body.tag-template .post-card-content ol {
+body.tag-template .post-content ol {
     list-style: none;
     padding-left: 0;
 }
 
-body.tag-template .post-card-content ol li {
+body.tag-template .post-content ol li {
     padding-left: 0;
 }
 
-body.tag-template .post-card-content ol li:nth-child(n+2) {
+body.tag-template .post-content ol li:nth-child(n+2) {
     margin-top: 1em;
 }
 
-body.tag-template .post-card-content li time {
+body.tag-template .post-content li time {
     opacity: 0.5;
 }
 
-body.tag-template .post-card-content li a:not(:hover) {
+body.tag-template .post-content li a:not(:hover) {
     color: inherit
 }
