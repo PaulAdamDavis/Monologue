@@ -1,19 +1,19 @@
-@import './_vars.css';
+@import '_vars.css';
 
-@import './_reset.css';
+@import '_reset.css';
 
-@import './_main.css';
+@import '_main.css';
 
-@import './_type.css';
-@import './_prism.css';
+@import '_type.css';
+@import '_prism.css';
 
-@import './_header.css';
+@import '_header.css';
 
-@import './_feed.css';
-@import './_post_card.css';
+@import '_feed.css';
+@import '_post_card.css';
 
-@import './_post.css';
-@import './_content.css';
+@import '_post.css';
+@import '_content.css';
 
 
 /* So yeah, this should be cleaned up… */
