@@ -1,5 +1,6 @@
 const {series, watch, src, dest, parallel} = require('gulp');
 const pump = require('pump');
+const del = require('del');
 
 // gulp plugins and utils
 const livereload = require('gulp-livereload');
@@ -27,6 +28,12 @@ const handleError = (done) => {
         return done(err);
     };
 };
+
+function cleanBuilt() {
+    return del([
+        'assets/built/**/*'
+    ]);
+}
 
 function hbs(done) {
     pump([
@@ -79,7 +86,7 @@ function zipper(done) {
 const cssWatcher = () => watch('assets/css/**', css);
 const hbsWatcher = () => watch(['*.hbs', '**/**/*.hbs', '!node_modules/**/*.hbs'], hbs);
 const watcher = parallel(cssWatcher, hbsWatcher);
-const build = series(css, js);
+const build = series(cleanBuilt, css, js);
 const dev = series(build, serve, watcher);
 
 exports.build = build;
