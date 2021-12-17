@@ -30,7 +30,7 @@
         width: 30vw;
         max-width: 140px;
         margin-bottom: 0;
-        margin-right: 20px;
+        margin-right: clamp(20px, 5vw, 40px);
         flex-shrink: 0;
     }
 }
