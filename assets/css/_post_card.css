@@ -4,9 +4,7 @@
     margin-top: 1.5em;
 }
 
-.post-card {
-
-}
+.post-card {}
 
 .post-card-inner {
     display: flex;
@@ -41,14 +39,7 @@
 }
 
 @media (min-width: 500px) {
-    .post-card-text {
-
-    }
-}
-
-.post-card-meta {
-    margin-top: -0.4em;
-    opacity: 0.5;
+    .post-card-text {}
 }
 
 .post-card-title {

@@ -5,9 +5,10 @@
         <div class="post-text">
             <div class="post-meta small-caps">
                 {{#if @custom.show_author}}
-                    {{primary_author.name}} &mdash;
+                    {{primary_author.name}} <span class="bull">&bull;</span>
                 {{/if}}
-                <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="Do MMMM, YYYY"}}</time>
+                <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM, YYYY"}}</time>
+                <span class="bull">&bull;</span> {{reading_time}}
             </div>
 
             <h2 class="post-title">{{title}}</h2>

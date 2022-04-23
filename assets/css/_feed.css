@@ -8,11 +8,6 @@
     margin-top: calc(var(--content-margin) * 2);
 }
 
-.gh-postfeed .post span {
-    color: var(--ghost-accent-color);
-    text-decoration: underline;
-}
-
 .gh-pagination {
     width: 100%;
     padding: 40px 0;
