@@ -2,6 +2,12 @@
     width: 100%;
 }
 
+@media (min-width: 900px) {
+    .gh-head {
+        margin-bottom: var(--content-margin);
+    }
+}
+
 .gh-head .inner {
     position: relative;
 }
@@ -16,14 +22,43 @@
     }
 }
 
+@media (min-width: 900px) {
+    .gh-head .inner {
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        column-gap: 32px;
+        line-height: 40px;
+    }
+
+    .gh-head .inner:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: var(--color-border);
+    }
+
+    .gh-head-left {
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+
+    .gh-head-right {
+        grid-column-start: 7;
+        grid-column-end: 13;
+    }
+}
+
 .gh-head h2 {
     font-family: var(--font-sans-serif);
     font-weight: 700;
     font-size: 110%;
 }
 
-.gh-head p {
-    font-size: 1.6rem;
+.gh-head-description {
+    font-size: 80%;
     opacity: 0.5;
 }
 
@@ -60,13 +95,32 @@
     }
 }
 
-.nav {
-    margin: 1em 0 0 0;
+@media (max-width: 899px) {
+    .nav {
+        margin: 1em 0 0 0;
+    }
+
+    .nav a {
+        padding: 2px 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav li:not(:first-child) {
+        margin-left: 1em;
+    }
+
+    .nav a {
+        font-size: 80%;
+    }
 }
 
 .nav a {
-    padding: 2px 0;
-    font-size: 80%;
     font-weight: 700;
 }
 
@@ -74,17 +128,19 @@
     opacity: 0.5;
 }
 
-.nav:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: var(--color-border);
-    margin-bottom: 1em;
-}
+@media (max-width: 899px) {
+    .nav:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-border);
+        margin-bottom: 1em;
+    }
 
-.nav + .nav:before {
-    width: 3em;
+    .nav + .nav:before {
+        width: 3em;
+    }
 }
 
 .nav + .nav a {
