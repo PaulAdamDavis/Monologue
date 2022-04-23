@@ -1,7 +1,7 @@
 {
     "name": "monologue",
     "description": "A theme for ghost",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "engines": {
         "ghost": ">=4.0.0"
     },
