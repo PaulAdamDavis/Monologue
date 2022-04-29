@@ -5,7 +5,7 @@
 @import '_main.css';
 
 @import '_type.css';
-@import '_prism.css';
+/* @import '_prism.css'; */
 
 @import '_header.css';
 
@@ -14,64 +14,4 @@
 
 @import '_post.css';
 @import '_content.css';
-
-
-/* So yeah, this should be cleaned up… */
-@media (max-width: 899px) {
-    .outer-wrapper {
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: 20px;
-    }
-
-    .outer-wrapper .gh-head {
-        grid-column-start: 1;
-        grid-column-end: 5;
-
-        padding-bottom: 1em;
-        border-bottom: 1px solid var(--color-border);
-    }
-
-    .gh-nav {
-        display: none;
-        padding-bottom: 1em;
-    }
-}
-
-@media (min-width: 900px) {
-    .outer-wrapper {
-        grid-template-columns: repeat(12, 1fr);
-        column-gap: 32px;
-    }
-
-    .outer-wrapper .gh-head .inner {
-        position: sticky;
-        top: var(--content-margin);
-    }
-
-    .outer-wrapper .gh-head {
-        grid-column-start: 1;
-        grid-column-end: 13;
-    }
-}
-
-@media (max-width: 899px) {
-    .outer-wrapper main {
-        grid-column-start: 1;
-        grid-column-end: 5;
-        padding-top: calc(var(--content-margin) * 2);
-    }
-}
-
-@media (min-width: 900px) and (max-width: 1099px) {
-    .outer-wrapper main {
-        grid-column-start: 2;
-        grid-column-end: 12;
-    }
-}
-
-@media (min-width: 1100px) {
-    .outer-wrapper main {
-        grid-column-start: 3;
-        grid-column-end: 11;
-    }
-}
+@import '_cards.css';

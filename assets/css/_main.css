@@ -12,60 +12,6 @@ body {
 }
 
 
-/* Main wrapper element
-/* ---------------------------------------------------------- */
-
-.outer-wrapper {
-    width: 100%;
-    max-width: calc(1200px + (var(--content-margin) * 2));
-    padding-left: var(--content-margin);
-    padding-right: var(--content-margin);
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    padding-top: var(--content-margin);
-}
-
-
-/* Grid
-/* ---------------------------------------------------------- */
-
-.gh-canvas {
-    display: grid;
-    grid-template-columns:
-        [full-start]
-          minmax(calc(calc(100% - 800px) / 2), 1fr)
-            [wide-start]
-                auto
-                    [main-start]
-                        600px
-                    [main-end]
-                auto
-            [wide-end]
-          minmax(calc(calc(100% - 800px) / 2), 1fr)
-        [full-end]
-    ;
-}
-
-@media (max-width: 800px) {
-    .gh-canvas {
-        grid-template-columns:
-            [full-start]
-            4vmin
-                [wide-start]
-                    0
-                        [main-start]
-                            auto
-                        [main-end]
-                    0
-                [wide-end]
-            4vmin
-            [full-end]
-        ;
-    }
-}
-
-
 /* Main
 /* ---------------------------------------------------------- */
 
@@ -96,9 +42,9 @@ body {
 }
 
 
-
 /* Remove all animations and transitions for people that prefer not to see them
 /* ------------------------------------------------------------------------- */
+
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;

@@ -1,13 +1,29 @@
-.gh-content > * {
-    grid-column: main-start / main-end;
+.gh-canvas {
+    display: grid;
+    grid-template-columns:
+        [full-start]
+        minmax(var(--gap), auto)
+        [wide-start]
+        minmax(auto, 140px)
+        [main-start]
+        min(720px, calc(100% - calc(var(--gap) * 2)))
+        [main-end]
+        minmax(auto, 140px)
+        [wide-end]
+        minmax(var(--gap), auto)
+        [full-end];
+}
+
+.gh-canvas > * {
+    grid-column: main-start/main-end;
 }
 
 .kg-width-wide {
-    grid-column: wide-start / wide-end;
+    grid-column: wide-start/wide-end;
 }
 
 .kg-width-full {
-    grid-column: full-start / full-end;
+    grid-column: full-start/full-end;
 }
 
 .kg-width-full img {
@@ -15,114 +31,85 @@
 }
 
 
-/* Content & Typography
-/* ---------------------------------------------------------- */
 
+
+
+
+
+.gh-content {
+    margin-top: 4rem;
+}
+
+.gh-content img {
+    height: auto;
+}
+
+/* Default vertical spacing */
 .gh-content > * + * {
-    margin-top: var(--content-margin);
-    margin-top: 1.7em;
+    margin-top: 5rem;
+    margin-bottom: 0;
 }
 
+.gh-content > p + ul,
+.gh-content > p + ol,
+.gh-content > ul + p,
+.gh-content > ol + p,
+.gh-content > p + pre,
+.gh-content > pre + pre,
+.gh-content > pre + p,
+.gh-content > p + p {
+    margin-top: 3rem;
+    margin-bottom: 0;
+}
+
+/* [id] represents all headings h1-h6, reset all margins */
+.gh-content > [id] {
+    margin: 0;
+}
+
+.gh-content > .kg-card + [id] {
+    margin-top: 6rem !important;
+}
+
+/* Add back a top margin to all headings, unless a heading
+is the very first element in the post content */
+.gh-content > [id]:not(:first-child) {
+    margin-top: 4.8rem;
+}
+
+/* Add a small margin between a heading and anything after it */
 .gh-content > [id] + * {
-    margin-top: 1.5rem;
+    margin-top: 1.6rem;
 }
 
-.gh-content [id]:not(:first-child) {
-    margin: 1.5em 0 0;
+/* A larger margin before/after HRs and blockquotes */
+.gh-content > hr,
+.gh-content > blockquote {
+    position: relative;
+    margin-top: 4rem;
 }
 
-.gh-content [id] + .kg-card,
-.gh-content blockquote + .kg-card {
-    margin-top: var(--content-margin);
+.gh-content > hr + *,
+.gh-content > blockquote + * {
+    margin-top: 4rem;
 }
 
-.gh-content > blockquote,
-.gh-content > ol,
-.gh-content > ul,
-.gh-content > dl,
-.gh-content > p {
-    /* Nothing for now */
+.gh-content ul,
+.gh-content ol,
+.gh-content dl {
+    padding-left: 1.8rem;
 }
 
-.gh-content > ul,
-.gh-content > ol,
-.gh-content > dl {
-    padding-left: 1em;
-}
-
-.gh-content > ul {
+.gh-content ul {
     list-style: disc;
 }
 
-.gh-content > ul li::marker {
-    color: var(--ghost-accent-color);
+.gh-content ol {
+    list-style: decimal;
 }
 
-.gh-content > ol {
-    list-style: auto;
-}
-
-.gh-content > ol li {
-    padding-left: 0.4em;
-}
-
-.gh-content > ol li::marker {
-    color: var(--ghost-accent-color);
-}
-
-.gh-content hr {
-    margin-top: var(--content-margin);
-}
-
-.gh-content hr + * {
-    margin-top: var(--content-margin) !important;
-}
-
-.gh-content blockquote {
-    position: relative;
-    font-style: italic;
-    padding-left: 1.5em;
-}
-
-.gh-content blockquote::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 0.3rem;
-    background: var(--ghost-accent-color);
-}
-
-@media (max-width: 650px) {
-    .gh-content blockquote {
-        padding-left: 0;
-    }
-
-    .gh-content blockquote::before {
-        left: -4vmin;
-    }
-}
-
-
-/* Content cards
-/* ---------------------------------------------------------- */
-
-.gh-content code {
-    font-family: var(--font-mono);
-    font-weight: 400;
-    font-size: 80%;
-    line-height: 1.8;
-}
-
-.gh-content :not(pre) code {
-    vertical-align: middle;
-    padding: 0.15em 0.4em 0.15em;
-    border: var(--color-inline-code-border) 1px solid;
-    line-height: 1;
-    color: var(--color-inline-code-text);
-    background: var(--color-inline-code-bg);
-    border-radius: 0.25em;
+.gh-content li + li {
+    margin-top: 0.8rem;
 }
 
 .gh-content > pre {
@@ -131,241 +118,39 @@
     background: var(--color-code-block-bg);
     color: var(--color-code-block-text);
     border-radius: 5px;
-    box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
+    box-shadow: 0 2px 6px -2px rgb(0 0 0 / 10%), 0 0 1px rgb(0 0 0 / 40%);
     white-space: pre;
-}
-
-.gh-content > pre ::selection {
-    background-color: #444;
 }
 
 .gh-content > pre code {
     display: block;
     font-size: 75%;
+    color: inherit;
 }
 
-.gh-content * + .kg-card,
-.gh-content .kg-card + * {
-    margin-top: var(--content-margin);
+.gh-content code {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 80%;
+    line-height: 1.8;
+    color: var(--color-inline-code-text);
 }
 
-.kg-embed-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+.gh-content blockquote:not(.kg-blockquote-alt) {
+    border-left: 0.2em solid var(--ghost-accent-color);
+    padding-left: 1em;
 }
 
-.kg-image-card img {
-    display: block;
-    margin: auto;
-    height: auto;
-}
+/* @media (max-width: 899px) {
+    .gh-content {
+        margin-top: 3.2rem;
+    }
 
+    .gh-content > * + * {
+        margin-top: 2rem;
+    }
 
-/* Galleries
-/* ---------------------------------------------------------- */
-
-.kg-image-card:not(.kg-card-hascaption) + .kg-gallery-card,
-.kg-gallery-card:not(.kg-card-hascaption) + .kg-image-card,
-.kg-gallery-card:not(.kg-card-hascaption) + .kg-gallery-card {
-    margin-top: 0.75em;
-}
-
-.kg-image-card.kg-card-hascaption + .kg-gallery-card,
-.kg-gallery-card.kg-card-hascaption + .kg-image-card,
-.kg-gallery-card.kg-card-hascaption + .kg-gallery-card {
-    margin-top: calc(0.75em + 2vmin);
-}
-
-.kg-gallery-container {
-    position: relative;
-}
-
-.kg-gallery-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.kg-gallery-image img {
-    display: block;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.kg-gallery-row:not(:first-of-type) {
-    margin: 0.75em 0 0 0;
-}
-
-.kg-gallery-image:not(:first-of-type) {
-    margin: 0 0 0 0.75em;
-}
-
-
-/* Bookmark Cards
-/* ---------------------------------------------------------- */
-
-.kg-bookmark-card,
-.kg-bookmark-publisher {
-    position: relative;
-}
-
-.kg-bookmark-container,
-.kg-bookmark-container:hover {
-    display: flex;
-    flex-direction: row-reverse;
-    color: currentColor;
-    background: var(--color-bookmark-bg);
-    font-family: var(--font-sans-serif);
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-}
-
-.kg-bookmark-content {
-    padding: 20px;
-    order: 1;
-    width: 75%;
-    word-break: break-word;
-}
-
-.kg-bookmark-title {
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 1.3em;
-}
-
-.kg-bookmark-description {
-    display: -webkit-box;
-    max-height: 45px;
-    margin: 0.5em 0 0 0;
-    font-size: 1.4rem;
-    line-height: 1.55em;
-    overflow: hidden;
-    opacity: 0.8;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
-.kg-bookmark-metadata {
-    margin-top: 20px;
-}
-
-.kg-bookmark-metadata {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    font-size: 1.3rem;
-    line-height: 1.3em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.kg-bookmark-description {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-}
-
-.kg-bookmark-icon {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin-right: 10px;
-}
-
-.kg-bookmark-thumbnail {
-    order: 2;
-    width: 25%;
-    display: flex;
-    min-width: 120px;
-}
-
-.kg-bookmark-thumbnail img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: bottom;
-    object-fit: cover;
-}
-
-.kg-bookmark-author {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.kg-bookmark-publisher::before {
-    content: "•";
-    margin: 0 .5em;
-}
-
-
-/* Card captions
-/* ---------------------------------------------------------- */
-
-.kg-width-full.kg-card-hascaption {
-    display: grid;
-    grid-template-columns: inherit;
-}
-
-.kg-width-wide.kg-card-hascaption img {
-    grid-column: wide-start / wide-end;
-}
-.kg-width-full.kg-card-hascaption img {
-    grid-column: 1 / -1;
-}
-
-.kg-width-full.kg-card-hascaption figcaption {
-    grid-column: main-start / main-end;
-}
-
-.kg-card.kg-card-hascaption figcaption {
-    text-align: center;
-    font-size: 70%;
-    opacity: 0.75;
-    margin-top: 0.5em;
-}
-
-
-/* Tables
-/* ---------------------------------------------------------- */
-
-.gh-content table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.gh-content th {
-    padding: 0.5em 0.8em;
-    text-align: left;
-    font-size: .75em;
-    text-transform: uppercase;
-}
-
-.gh-content td {
-    padding: 0.4em 0.7em;
-}
-
-.gh-content tbody tr:nth-child(2n + 1) {
-    background-color: rgba(0,0,0,0.1);
-    padding: 1px;
-}
-
-.gh-content tbody tr:nth-child(2n + 2) td:last-child {
-    box-shadow:
-        inset 1px 0 rgba(0,0,0,0.1),
-        inset -1px 0 rgba(0,0,0,0.1);
-}
-
-.gh-content tbody tr:nth-child(2n + 2) td {
-    box-shadow: inset 1px 0 rgba(0,0,0,0.1);
-}
-
-.gh-content tbody tr:last-child {
-    border-bottom: 1px solid rgba(0,0,0,.1);
-}
+    .gh-content > [id]:not(:first-child) {
+        margin-top: 3.2rem;
+    }
+} */

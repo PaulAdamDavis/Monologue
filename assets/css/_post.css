@@ -20,13 +20,13 @@
     color: var(--color-text);
 }
 
-.post-image {
+/* .post-image {
     flex-shrink: 0;
     margin-bottom: 1em;
     margin-right: 0;
-}
+} */
 
-.post-image img {
+/* .post-image img {
     width: 100%;
     display: block;
 }
@@ -36,7 +36,7 @@
     font-size: 70%;
     opacity: 0.75;
     margin-top: 0.5em;
-}
+} */
 
 .post-text {
     flex-grow: 2;
@@ -73,6 +73,3 @@
     margin-top: -1.5em;
     margin-bottom: 2em;
 }
-
-.post-content {}
-

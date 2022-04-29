@@ -127,6 +127,11 @@ b {
     font-weight: 600;
 }
 
+em,
+i {
+    font-style: italic;
+}
+
 .small-caps {
     text-transform: uppercase;
     font-size: 1.3rem;

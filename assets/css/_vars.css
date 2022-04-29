@@ -28,6 +28,9 @@
     --height: 4rem;
     --margin: 2rem;
     --radius: 0.5rem;
+
+    /* Grid */
+    --gap: 3.6rem;
 }
 
 html.theme-dark {

@@ -1,8 +1,8 @@
 {{!< default}}
 
 {{#post}}
-    <article class="{{post_class}}">
-        <div class="post-text">
+    <article class="gh-post {{post_class}}">
+        <header class="gh-post-head gh-canvas">
             <div class="post-meta small-caps">
                 {{#if @custom.show_author}}
                     {{primary_author.name}} <span class="bull">&bull;</span>
@@ -18,7 +18,7 @@
             {{/if}}
 
             {{#if feature_image}}
-                <figure class="post-image">
+                <figure class="kg-card kg-image-card kg-width-wide {{#if feature_image_caption}}kg-card-hascaption{{/if}}">
                     <img src="{{img_url feature_image size="l"}}"
                         alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
                     />
@@ -27,10 +27,10 @@
                     {{/if}}
                 </figure>
             {{/if}}
+        </header>
 
-            <div class="gh-content post-content">
-                <p>{{content}}</p>
-            </div>
+        <div class="gh-content gh-canvas">
+            {{content}}
         </div>
     </article>
 {{/post}}
