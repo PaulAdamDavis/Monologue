@@ -58,7 +58,7 @@
 .gh-content > pre + pre,
 .gh-content > pre + p,
 .gh-content > p + p {
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 0;
 }
 
@@ -126,31 +126,24 @@ is the very first element in the post content */
     display: block;
     font-size: 75%;
     color: inherit;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
 }
 
 .gh-content code {
     font-family: var(--font-mono);
     font-weight: 400;
-    font-size: 80%;
+    font-size: 75%;
     line-height: 1.8;
     color: var(--color-inline-code-text);
+    background-color: var(--color-inline-code-bg);
+    border: 1px solid var(--color-inline-code-bg-border);
+    padding: calc(0.2em - 1px) calc(0.5em - 1px);
+    border-radius: 3px;
 }
 
 .gh-content blockquote:not(.kg-blockquote-alt) {
     border-left: 0.2em solid var(--ghost-accent-color);
     padding-left: 1em;
 }
-
-/* @media (max-width: 899px) {
-    .gh-content {
-        margin-top: 3.2rem;
-    }
-
-    .gh-content > * + * {
-        margin-top: 2rem;
-    }
-
-    .gh-content > [id]:not(:first-child) {
-        margin-top: 3.2rem;
-    }
-} */

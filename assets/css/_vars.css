@@ -16,6 +16,7 @@
     --color-inline-code-border: #e1eaef;
     --color-inline-code-text: #dc0050;
     --color-inline-code-bg: #f0f6f9;
+    --color-inline-code-bg-border: #e1eaef;
     --color-bookmark-bg: #fff;
     --color-border: #e2e8ec;
 
@@ -31,6 +32,7 @@
 
     /* Grid */
     --gap: 3.6rem;
+    --gallery-gap: 0.75em;
 }
 
 html.theme-dark {
@@ -44,6 +46,7 @@ html.theme-dark {
     --color-inline-code-border: #3c3c3c;
     --color-inline-code-text: #c97292;
     --color-inline-code-bg: #222222;
+    --color-inline-code-bg-border: #222222;
     --color-bookmark-bg: #222;
     --color-border: #383838;
 
@@ -63,6 +66,7 @@ html.theme-dark {
         --color-inline-code-border: #3c3c3c;
         --color-inline-code-text: #c97292;
         --color-inline-code-bg: #222222;
+        --color-inline-code-bg-border: #222222;
         --color-bookmark-bg: #222;
         --color-border: #383838;
 
@@ -74,6 +78,8 @@ html.theme-dark {
 @media (max-width: 899px) {
     :root {
         --content-margin: calc(2vmin + 1em);
+        --gap: 1.5rem;
+        --gallery-gap: 0.4em;
     }
 }
 

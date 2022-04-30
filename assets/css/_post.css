@@ -1,60 +1,14 @@
-.fitVids-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    width: 100%;
-    height: 0;
-}
-
-.fitVids-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.post {}
-
-.post-link {
-    display: block;
-    color: var(--color-text);
-}
-
-/* .post-image {
-    flex-shrink: 0;
-    margin-bottom: 1em;
-    margin-right: 0;
-} */
-
-/* .post-image img {
-    width: 100%;
-    display: block;
-}
-
-.post-image figcaption {
-    text-align: center;
-    font-size: 70%;
-    opacity: 0.75;
-    margin-top: 0.5em;
-} */
-
-.post-text {
-    flex-grow: 2;
-}
-
 .post-meta {
     opacity: 0.5;
     line-height: 1.4;
 }
-
-.post-date {}
 
 .post-meta + .post-title {
     margin-top: 0.3em;
 }
 
 .post-title {
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 }
 
 .post-title a {
@@ -70,6 +24,11 @@
     opacity: 0.8;
     font-size: 110%;
     line-height: 1.6;
-    margin-top: -1.5em;
-    margin-bottom: 2em;
+    margin-top: 0.75em;
+    /* margin-bottom: 2em; */
+}
+
+.post-title + .kg-image-card,
+.post-excerpt + .kg-image-card {
+    margin-top: 4rem;
 }

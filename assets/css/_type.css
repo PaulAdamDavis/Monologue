@@ -138,6 +138,12 @@ i {
     font-weight: 500;
 }
 
+@media (max-width: 899px) {
+    .small-caps {
+        font-size: 1.2rem;
+    }
+}
+
 pre {}
 
 code {}
