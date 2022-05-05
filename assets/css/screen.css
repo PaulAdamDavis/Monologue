@@ -5,7 +5,7 @@
 @import '_main.css';
 
 @import '_type.css';
-/* @import '_prism.css'; */
+@import '_prism.css';
 
 @import '_header.css';
 

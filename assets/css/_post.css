@@ -3,6 +3,14 @@
     line-height: 1.4;
 }
 
+.post-meta a {
+    color: inherit;
+}
+
+.post-meta a:hover {
+    color: var(--color-primary);
+}
+
 .post-meta + .post-title {
     margin-top: 0.3em;
 }
