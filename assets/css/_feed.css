@@ -30,23 +30,43 @@
 
 
 
-body.tag-template .post-content ol {
+body.author-template .gh-content ol,
+body.tag-template .gh-content ol {
     list-style: none;
     padding-left: 0;
 }
 
-body.tag-template .post-content ol li {
+body.author-template .gh-content ol li,
+body.tag-template .gh-content ol li {
     padding-left: 0;
 }
 
-body.tag-template .post-content ol li:nth-child(n+2) {
+body.author-template .gh-content ol li:nth-child(n+2),
+body.tag-template .gh-content ol li:nth-child(n+2) {
     margin-top: 1em;
 }
 
-body.tag-template .post-content li time {
+body.author-template .gh-content li time,
+body.tag-template .gh-content li time {
     opacity: 0.5;
 }
 
-body.tag-template .post-content li a:not(:hover) {
+body.author-template .gh-content li a:not(:hover),
+body.tag-template .gh-content li a:not(:hover) {
     color: inherit
+}
+
+.author-profile-image {
+    display: block;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.5em;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: inset 0 0 0 1px var(--color-border);
+}
+
+.author-profile-image img {
+    display: none;
 }

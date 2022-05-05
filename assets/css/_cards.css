@@ -70,7 +70,7 @@
 }
 
 
-/* Bookmark Cards
+/* Embed cards Cards
 /* ---------------------------------------------------------- */
 
 .kg-embed-card .fitVids-wrapper {
@@ -187,4 +187,8 @@
 .kg-bookmark-publisher::before {
     content: "•";
     margin: 0 .5em;
+}
+
+.kg-bookmark-card + .kg-bookmark-card {
+    margin-top: 1em;
 }

@@ -40,6 +40,12 @@
     margin-top: 4rem;
 }
 
+@media (max-width: 899px) {
+    .gh-content {
+        margin-top: 2rem;
+    }
+}
+
 .gh-content img {
     height: auto;
 }
@@ -87,6 +93,10 @@ is the very first element in the post content */
 .gh-content > blockquote {
     position: relative;
     margin-top: 4rem;
+}
+
+.gh-content > p + hr {
+    margin-top: 3.5rem;
 }
 
 .gh-content > hr + *,

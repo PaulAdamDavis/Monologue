@@ -42,17 +42,18 @@
     })(window, document);
 </script>
 
-{{!-- https://github.com/francoischalifour/medium-zoom --}}
-<script src="https://unpkg.com/medium-zoom@1.0.5/dist/medium-zoom.min.js"></script>
+<script type="text/javascript" src="{{asset 'js/medium-zoom.min.js'}}"></script>
 <script>
     mediumZoom('.kg-gallery-image img', {
-        scrollOffset: 5
+        scrollOffset: 5,
+        margin: 20
     });
 </script>
 <style>
     .medium-zoom-overlay {
         background: none !important;
     }
+
     .medium-zoom-overlay:before {
         content: '';
         position: absolute;
@@ -66,7 +67,7 @@
 </style>
 
 <script>
-    function theme() {
+    function themeSwitcher() {
         const html = document.documentElement;
         const toggle = document.querySelector('.js-theme-toggle');
 
@@ -91,7 +92,7 @@
             }
         });
     }
-    theme();
+    themeSwitcher();
 </script>
 
 {{!-- <script type="text/javascript" src="{{asset 'js/prism.js'}}"></script> --}}

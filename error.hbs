@@ -1,23 +1,24 @@
-
 {{!< default}}
 
-<header class="gh-header">
-    <h1>{{statusCode}}</h1>
-    <p>{{message}}</p>
-</header>
+<article class="gh-post {{post_class}}">
+    <header class="gh-post-head gh-canvas">
+        <h2 class="post-title" style="text-align: center;">{{statusCode}}</h2>
+        <p class="post-excerpt" style="text-align: center;">{{message}}</p>
+    </header>
 
-<section class="gh-content">
     {{#if errorDetails}}
-    <ul>
-        {{#foreach errorDetails}}
-        <li>
-            <h5>{{{rule}}}</h5>
-            {{#foreach failures}}
-            <span><strong>Ref:</strong> {{ref}}</span><br>
-            <span><strong>Message:</strong> {{message}}</span>
-            {{/foreach}}
-        </li>
-        {{/foreach}}
-    </ul>
+        <div class="gh-content gh-canvas">
+            <ul>
+                {{#foreach errorDetails}}
+                <li>
+                    <h5>{{{rule}}}</h5>
+                    {{#foreach failures}}
+                    <span><strong>Ref:</strong> {{ref}}</span><br>
+                    <span><strong>Message:</strong> {{message}}</span>
+                    {{/foreach}}
+                </li>
+                {{/foreach}}
+            </ul>
+        </div>
     {{/if}}
-</section>
+</article>

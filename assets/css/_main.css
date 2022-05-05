@@ -15,23 +15,6 @@ body {
 /* Main
 /* ---------------------------------------------------------- */
 
-.gh-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.gh-padded {
-    padding-left: var(--margin);
-    padding-right: var(--margin);
-}
-
-.gh-container.gh-padded {
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 100%;
-}
-
 .page-footer {
     width: 100%;
     padding: 40px 4vmin;

@@ -78,7 +78,7 @@ html.theme-dark {
 @media (max-width: 899px) {
     :root {
         --content-margin: calc(2vmin + 1em);
-        --gap: 1.5rem;
+        --gap: 4vw;
         --gallery-gap: 0.4em;
     }
 }

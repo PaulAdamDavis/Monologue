@@ -108,7 +108,7 @@
 }
 
 .gh-nav-toggle:checked + .gh-nav-toggle-faux {
-    opacity: 0.25;
+    opacity: 0.5;
 }
 
 .gh-nav-toggle:checked + .gh-nav-toggle-faux + .gh-nav {
@@ -125,6 +125,7 @@
 @media (max-width: 899px) {
     .nav {
         margin: 1em 0 0 0;
+        text-align: center;
     }
 
     .nav a {
@@ -141,18 +142,16 @@
     .nav li:not(:first-child) {
         margin-left: 1em;
     }
-
-    .nav a {
-        font-size: 80%;
-    }
 }
 
 .nav a {
+    font-size: 80%;
     font-weight: 700;
+    color: var(--color-text-alt);
 }
 
-.nav li:not(.nav-current) a:not(:hover) {
-    opacity: 0.5;
+.nav li.nav-current a {
+    color: var(--color-text);
 }
 
 @media (max-width: 899px) {
@@ -163,6 +162,8 @@
         height: 1px;
         background-color: var(--color-border);
         margin-bottom: 1em;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .nav + .nav:before {
@@ -174,9 +175,7 @@
     font-weight: 400;
 }
 
-.nav-current a {
-    opacity: 1;
-}
+.nav-current a {}
 
 .nav a:hover {
     color: var(--ghost-accent-color);

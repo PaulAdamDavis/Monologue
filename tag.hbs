@@ -1,40 +1,45 @@
 {{!< default}}
 
-<div class="gh-container gh-padded">
-    <div class="gh-postfeed">
-        <article class="post">
-            <div class="post-text">
-                {{#tag}}
-
-                    {{#if feature_image}}
-                        <figure class="post-image">
-                            <img src="{{img_url feature_image size="l"}}"
-                                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                            />
-                        </figure>
-                    {{/if}}
-
-                    <div class="post-meta small-caps">
-                        A collection of {{plural ../pagination.total empty='zero posts' singular='% post' plural='% posts'}}
-                    </div>
-                    <h2 class="post-title">{{name}}</h2>
-
-                    {{#if description}}
-                        <p class="post-excerpt">{{description}}</p>
-                    {{/if}}
-
-                    <div class="gh-content post-content">
-                        <hr>
-                        <ol>
-                            {{#get "posts" limit="all" filter="tag:{{slug}}"}}
-                                {{#foreach posts}}
-                                    <li><time class="small-caps" datetime="{{date format="YYYY-MM-DD"}}">{{date format="Do MMMM, YYYY"}}</time> <br><a href="{{url}}">{{title}}</a></li>
-                                {{/foreach}}
-                            {{/get}}
-                        </ol>
-                    </div>
-                {{/tag}}
+<article class="gh-post">
+    {{#tag}}
+        <header class="gh-post-head gh-canvas">
+            <div class="post-meta small-caps">
+                A collection of {{plural ../pagination.total empty='zero posts' singular='% post' plural='% posts'}}
             </div>
-        </article>
+
+            <h2 class="post-title">{{name}}</h2>
+
+            {{#if description}}
+                <p class="post-excerpt">{{description}}</p>
+            {{/if}}
+
+            {{#if feature_image}}
+                <figure class="kg-card kg-image-card {{#if feature_image_caption}}kg-card-hascaption{{/if}}">
+                    <img src="{{img_url feature_image size="l"}}"
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    />
+                    {{#if feature_image_caption}}
+                        <figcaption>{{feature_image_caption}}</figcaption>
+                    {{/if}}
+                </figure>
+            {{/if}}
+        </header>
+    {{/tag}}
+
+    <div class="gh-content gh-canvas">
+        {{#tag}}
+            {{#unless feature_image}}
+                <hr style="margin-top: 0;">
+            {{/unless}}
+        {{/tag}}
+        <ol reversed>
+            {{#foreach posts}}
+                <li><time class="post-meta small-caps" datetime="{{date format="YYYY-MM-DD"}}">{{date format="Do MMMM, YYYY"}}</time> <br><a href="{{url}}">{{title}}</a></li>
+            {{/foreach}}
+        </ol>
     </div>
+</article>
+
+<div class="gh-pagination">
+    {{pagination}}
 </div>
