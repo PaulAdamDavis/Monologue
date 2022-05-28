@@ -1,7 +1,7 @@
 /* Only things that don't start with `kg-` */
-
 .kg-image-card img {
     display: block;
+    height: auto;
 }
 
 .kg-card.kg-card-hascaption figcaption{
@@ -17,15 +17,9 @@
     opacity: 1;
 }
 
+/* Default blockquote cards come with italic styles, I don't want these */
 .kg-blockquote-alt {
     font-style: normal;
-}
-
-.gh-content .kg-callout-card .kg-callout-text,
-.gh-content .kg-toggle-card .kg-toggle-content > ol,
-.gh-content .kg-toggle-card .kg-toggle-content > ul,
-.gh-content .kg-toggle-card .kg-toggle-content > p {
-    /* font-size: 1.7rem; */
 }
 
 
@@ -42,31 +36,6 @@
 .kg-gallery-card.kg-card-hascaption + .kg-image-card,
 .kg-gallery-card.kg-card-hascaption + .kg-gallery-card {
     margin-top: calc(var(--gallery-gap) + 2vmin);
-}
-
-.kg-gallery-container {
-    position: relative;
-}
-
-.kg-gallery-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.kg-gallery-image img {
-    display: block;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.kg-gallery-row:not(:first-of-type) {
-    margin: var(--gallery-gap) 0 0 0;
-}
-
-.kg-gallery-image:not(:first-of-type) {
-    margin: 0 0 0 var(--gallery-gap);
 }
 
 
@@ -86,109 +55,4 @@
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-
-/* Bookmark Cards
-/* ---------------------------------------------------------- */
-
-.kg-bookmark-card,
-.kg-bookmark-publisher {
-    position: relative;
-}
-
-.kg-bookmark-container,
-.kg-bookmark-container:hover {
-    display: flex;
-    flex-direction: row-reverse;
-    color: currentColor;
-    background: var(--color-bookmark-bg);
-    font-family: var(--font-sans-serif);
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-}
-
-.kg-bookmark-content {
-    padding: 20px;
-    order: 1;
-    width: 75%;
-    word-break: break-word;
-}
-
-.kg-bookmark-title {
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 1.3em;
-}
-
-.kg-bookmark-description {
-    display: -webkit-box;
-    max-height: 45px;
-    margin: 0.5em 0 0 0;
-    font-size: 1.4rem;
-    line-height: 1.55em;
-    overflow: hidden;
-    opacity: 0.8;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
-.kg-bookmark-metadata {
-    margin-top: 20px;
-}
-
-.kg-bookmark-metadata {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    font-size: 1.3rem;
-    line-height: 1.3em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.kg-bookmark-description {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-}
-
-.kg-bookmark-icon {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin-right: 10px;
-}
-
-.kg-bookmark-thumbnail {
-    order: 2;
-    width: 25%;
-    display: flex;
-    min-width: 120px;
-}
-
-.kg-bookmark-thumbnail img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: bottom;
-    object-fit: cover;
-}
-
-.kg-bookmark-author {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.kg-bookmark-publisher::before {
-    content: "•";
-    margin: 0 .5em;
-}
-
-.kg-bookmark-card + .kg-bookmark-card {
-    margin-top: 1em;
 }

@@ -46,14 +46,14 @@
     }
 }
 
-.gh-content img {
-    height: auto;
-}
-
 /* Default vertical spacing */
 .gh-content > * + * {
     margin-top: 5rem;
     margin-bottom: 0;
+}
+
+.gh-content .kg-card-hascaption + * {
+    margin-top: 4rem;
 }
 
 .gh-content > p + ul,
@@ -64,7 +64,7 @@
 .gh-content > pre + pre,
 .gh-content > pre + p,
 .gh-content > p + p {
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 0;
 }
 
@@ -80,12 +80,12 @@
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
-    margin-top: 4.8rem;
+    margin-top: 6rem;
 }
 
 /* Add a small margin between a heading and anything after it */
 .gh-content > [id] + * {
-    margin-top: 1.6rem;
+    margin-top: 3rem;
 }
 
 /* A larger margin before/after HRs and blockquotes */
