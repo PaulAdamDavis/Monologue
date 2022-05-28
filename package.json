@@ -3,8 +3,7 @@
     "description": "A theme for ghost",
     "version": "1.2.0",
     "engines": {
-        "ghost": ">=4.47.0",
-        "ghost-api": ">=4.47.0"
+        "ghost": ">=4.47.0"
     },
     "license": "MIT",
     "scripts": {
