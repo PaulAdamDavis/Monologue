@@ -1,0 +1,23 @@
+<div class="post-meta small-caps">
+    {{^has visibility="public"}}
+        {{> "icons/lock"}}
+    {{/has}}
+
+    {{#if featured}}
+        {{> "icons/fire"}}
+    {{/if}}
+
+    {{#primary_tag}}
+        <span class="tag">{{name}}</span>
+    {{/primary_tag}}
+
+    {{#if @custom.show_author}}
+        <span>{{primary_author.name}}</span>
+    {{/if}}
+
+    <time datetime="{{date format="dddd, MMMM Do YYYY, h:mm:ss a"}}">{{date format="D MMM, YYYY"}}</time>
+
+    {{#if @custom.show_reading_time}}
+        <span>{{reading_time}}</span>
+    {{/if}}
+</div>

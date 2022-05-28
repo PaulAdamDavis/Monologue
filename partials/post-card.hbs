@@ -11,15 +11,11 @@
         {{/if}}
 
         <div class="post-card-text">
-            <div class="post-meta small-caps post-card-meta">
-                {{#if @custom.show_author}}
-                    {{primary_author.name}} <span class="bull">&bull;</span>
-                {{/if}}
-                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM, YYYY"}}</time>
-                <span class="bull">&bull;</span> {{reading_time}}
-            </div>
+            {{> "post-meta"}}
 
-            <h2 class="post-card-title h4">{{title}}</h2>
+            <h2 class="post-card-title h4">
+                {{title}}
+            </h2>
 
             <p class="post-card-excerpt">{{excerpt characters="400"}}</p>
         </div>

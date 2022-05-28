@@ -3,13 +3,7 @@
 {{#post}}
     <article class="gh-post {{post_class}}">
         <header class="gh-post-head gh-canvas">
-            <div class="post-meta small-caps">
-                {{#if @custom.show_author}}
-                    <a href="{{primary_author.url}}">{{primary_author.name}}</a> <span class="bull">&bull;</span>
-                {{/if}}
-                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM, YYYY"}}</time>
-                <span class="bull">&bull;</span> {{reading_time}}
-            </div>
+            {{> "post-meta"}}
 
             <h2 class="post-title">{{title}}</h2>
 

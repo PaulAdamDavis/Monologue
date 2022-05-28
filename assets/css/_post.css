@@ -1,6 +1,32 @@
 .post-meta {
-    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    color: var(--color-text-alt);
     line-height: 1.4;
+}
+
+.post-meta > :not(svg) + :not(svg):before {
+    content: '\2022';
+    color: var(--color-text-alt);
+    display: inline-block;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+}
+
+.post-meta .icon-lock {
+    color: var(--color-lock);
+}
+
+.post-meta .icon-fire {
+    color: var(--color-fire);
+}
+
+.post-meta > svg + * {
+    margin-left: 0.8em;
+}
+
+.post-meta > svg + svg {
+    margin-left: 0.4em;
 }
 
 .post-meta a {
@@ -11,13 +37,21 @@
     color: var(--color-primary);
 }
 
+.post-meta .icon-lock {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
 .post-meta + .post-title {
     margin-top: 0.3em;
 }
 
-.post-title {
-    /* margin-bottom: 1em; */
+.post-meta .tag {
+    color: var(--color-primary);
 }
+
+.post-title {}
 
 .post-title a {
     color: inherit;

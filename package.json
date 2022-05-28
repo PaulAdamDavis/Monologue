@@ -49,6 +49,7 @@
         "defaults"
     ],
     "config": {
+        "card_assets": true,
         "posts_per_page": 10,
         "image_sizes": {
             "xxs": {
@@ -74,6 +75,10 @@
             "show_author": {
                 "type": "boolean",
                 "default": true
+            },
+            "show_reading_time": {
+                "type": "boolean",
+                "default": false
             },
             "dark_mode_accent_color": {
                 "type": "color",
