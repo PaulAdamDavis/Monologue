@@ -59,6 +59,7 @@ pre[class*=language-] {
 .token.symbol,
 .token.tag {
 	color: #f92672;
+	color: #e53071;
 }
 
 .token.boolean,
@@ -73,6 +74,7 @@ pre[class*=language-] {
 .token.selector,
 .token.string {
 	color: #a6e22e;
+	color: #9fc949;
 }
 
 .language-css .token.string,
@@ -89,6 +91,7 @@ pre[class*=language-] {
 .token.class-name,
 .token.function {
 	color: #73d4ff;
+	color: #64b7db;
 }
 
 .token.keyword {
