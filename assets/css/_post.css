@@ -1,3 +1,7 @@
+.gh-post-head .kg-image-card img {
+    width: 100%;
+}
+
 .post-meta {
     display: flex;
     align-items: center;
