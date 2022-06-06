@@ -6,7 +6,7 @@ const del = require('del');
 const livereload = require('gulp-livereload');
 const postcss = require('gulp-postcss');
 const zip = require('gulp-zip');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const beeper = require('beeper');
 
 // postcss plugins
