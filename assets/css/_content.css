@@ -122,7 +122,7 @@ is the very first element in the post content */
     margin-top: 0.8rem;
 }
 
-.gh-content > pre {
+.gh-content pre {
     overflow: scroll;
     padding: 0.8em 1.2em;
     background: var(--color-code-block-bg);
@@ -132,7 +132,7 @@ is the very first element in the post content */
     white-space: pre;
 }
 
-.gh-content > pre code {
+.gh-content pre code {
     display: block;
     font-size: 75%;
     color: inherit;
