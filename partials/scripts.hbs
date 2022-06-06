@@ -27,29 +27,13 @@
     })(window, document);
 </script>
 
-<script type="text/javascript" src="{{asset 'js/medium-zoom.min.js'}}"></script>
-<script>
-    mediumZoom('.kg-gallery-image > img, .kg-image-card > img', {
-        scrollOffset: 5,
-        margin: 20
-    });
-</script>
-<style>
-    .medium-zoom-overlay {
-        background: none !important;
-    }
+{{#is "post, page"}}
+    {{> pswp}}
 
-    .medium-zoom-overlay:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: var(--color-background) !important;
-        opacity: 0.9;
-    }
-</style>
+    <script type="text/javascript" src="{{asset 'built/photoswipe.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'built/photoswipe-ui-default.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'built/lightbox.js'}}"></script>
+{{/is}}
 
 <script>
     function themeSwitcher() {
@@ -80,4 +64,4 @@
     themeSwitcher();
 </script>
 
-<script type="text/javascript" src="{{asset 'js/prism.js'}}"></script>
+<script type="text/javascript" src="{{asset 'built/prism.js'}}"></script>
