@@ -55,7 +55,9 @@
     color: var(--color-primary);
 }
 
-.post-title {}
+.post-title {
+    color: var(--color-text-header);
+}
 
 .post-title a {
     color: inherit;
@@ -66,12 +68,10 @@
 }
 
 .post-excerpt {
-    font-family: var(--font-serif);
-    opacity: 0.8;
-    font-size: 110%;
-    line-height: 1.6;
+    color: var(--color-text-alt);
+    font-size: 140%;
+    line-height: 1.4;
     margin-top: 0.75em;
-    /* margin-bottom: 2em; */
 }
 
 .post-title + .kg-image-card,
