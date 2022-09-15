@@ -1,0 +1,50 @@
+{{!< default}}
+
+{{#post}}
+    <article class="gh-post {{post_class}}">
+        <header class="gh-post-head gh-canvas">
+            <h2 class="post-title">{{title}}</h2>
+
+            {{#if custom_excerpt}}
+                <p class="post-excerpt">{{excerpt}}</p>
+            {{/if}}
+
+            {{#if feature_image}}
+                <figure class="kg-card kg-image-card kg-width-wide {{#if feature_image_caption}}kg-card-hascaption{{/if}}">
+                    <img src="{{img_url feature_image size="l"}}"
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    />
+                    {{#if feature_image_caption}}
+                        <figcaption>{{feature_image_caption}}</figcaption>
+                    {{/if}}
+                </figure>
+            {{/if}}
+        </header>
+
+        <div class="gh-content gh-canvas">
+            {{content}}
+
+            <hr>
+
+            {{#if @member}}
+                <p>Yo! Thanks for becoming a member 🎉</p>
+
+
+                {{#if @member.paid}}
+                    <p>Paid member</p>
+
+                    {{#foreach @member.subscriptions}}
+                        <p>Name: <strong>{{customer.name}}</strong></p>
+                        <p>Plan type: <strong>{{plan.nickname}}</strong></p>
+                        <p>Status: <strong>{{status}}</strong></p>
+                        <p>Interval: <strong>{{plan.interval}}</strong></p>
+                        {{#match plan.interval "=" "month"}}<p>This is monthly</p>{{/match}}
+                        {{#match plan.interval "=" "year"}}<p>This is yearly</p>{{/match}}
+                    {{/foreach}}
+                {{else if @member}}
+                    <p>Free member</p>
+                {{/if}}
+            {{/if}}
+        </div>
+    </article>
+{{/post}}
