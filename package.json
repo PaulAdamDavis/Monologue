@@ -3,7 +3,7 @@
     "description": "A theme for ghost",
     "version": "1.4.0",
     "engines": {
-        "ghost": ">=5"
+        "ghost": ">=5.0.0"
     },
     "license": "MIT",
     "scripts": {
@@ -33,7 +33,7 @@
         "autoprefixer": "9.8.0",
         "cssnano": "4.1.10",
         "del": "6.0.0",
-        "gscan": "4.9.0",
+        "gscan": "4.34.0",
         "gulp": "4.0.2",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "8.0.0",
