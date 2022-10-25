@@ -24,6 +24,41 @@ body {
     font-size: 80%;
 }
 
+.page-footer-nav {
+    --nav-margin: 1.2em;
+    margin-top: var(--nav-margin);
+    margin-bottom: var(--nav-margin);
+}
+
+.page-footer-nav:before,
+.page-footer-nav:after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 2em;
+    height: 2px;
+    margin: 0 auto;
+    background-color: var(--color-border);
+}
+
+.page-footer-nav:before {
+    margin-bottom: var(--nav-margin);
+}
+
+.page-footer-nav:after {
+    margin-top: var(--nav-margin);
+}
+
+.page-footer-nav .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-footer-nav .nav li {
+    margin: 0 0.5em;
+}
+
 
 /* Remove all animations and transitions for people that prefer not to see them
 /* ------------------------------------------------------------------------- */

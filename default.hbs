@@ -24,53 +24,21 @@
 </head>
 <body class="{{body_class}}">
 
-    {{!-- <div class="outer-wrapper"> --}}
-        <header class="gh-head">
-            <div class="inner">
+    {{> "header"}}
 
-                <div class="gh-head-left">
-                    <a class="gh-head-logo" href="{{@site.url}}">
-                        {{#if @site.logo}}
-                            <img class="site-logo" src="{{img_url @site.logo absolute="true"}}" height="50" alt="{{@site.title}}" />
-                        {{else}}
-                            <h2>{{@site.title}}</h2>
-                        {{/if}}
-                    </a>
-
-                    {{#if @site.description}}
-                        <p class="gh-head-description">{{@site.description}}</p>
-                    {{/if}}
-                </div>
-
-                <div class="gh-head-right">
-                    <input type="checkbox" id="gh-nav-toggle" class="gh-nav-toggle">
-                    <label for="gh-nav-toggle" class="gh-nav-toggle-faux">
-                        <svg viewBox="0 0 70 46">
-                            <rect width="70" height="6"></rect>
-                            <rect y="20" width="70" height="6"></rect>
-                            <rect y="40" width="70" height="6"></rect>
-                        </svg>
-                    </label>
-
-                    <div class="gh-nav">
-                        {{navigation}}
-                        {{navigation type="secondary"}}
-                    </div>
-                </div>
-
-            </div>
-        </header>
-
-        <main>
-            {{{body}}}
-        </main>
-    {{!-- </div> --}}
+    <main>
+        {{{body}}}
+    </main>
 
     <footer class="page-footer">
         <a class="js-theme-toggle" href="#" data-system-label="Using system theme" data-dark-label="Using dark theme" data-light-label="Using light theme">
             System theme
         </a>
-        <br>
+
+        <div class="page-footer-nav">
+            {{navigation type="secondary"}}
+        </div>
+
         <a href="https://ghost.org" target="_blank" rel="noopener">Publish with Ghost</a>
     </footer>
 
