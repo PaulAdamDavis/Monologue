@@ -10,10 +10,11 @@
 
 .gh-pagination {
     width: 100%;
-    padding: 40px 0;
+    padding: 20px var(--gap);
     margin: calc(var(--content-margin) * 2) auto -100px;
     border-top: var(--color-border) 1px solid;
     text-align: center;
+    max-width: calc(1200px + var(--gap) * 2);
 }
 
 .gh-pagination .newer-posts {
@@ -24,8 +25,13 @@
     margin-left: 1em;
 }
 
+.page-number {
+    white-space: nowrap;
+}
+
 .gh-pagination a {
     color: var(--ghost-accent-color);
+    white-space: nowrap;
 }
 
 
