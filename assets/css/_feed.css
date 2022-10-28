@@ -15,8 +15,6 @@
 }
 
 .gh-postfeed .post-card:nth-child(n+2) {
-    padding-top: calc(var(--content-margin) * 2);
-    margin-top: calc(var(--content-margin) * 2);
     position: relative;
 }
 
