@@ -17,6 +17,16 @@
     display: block;
 }
 
+.gh-search {
+    padding: 0;
+    cursor: pointer;
+}
+
+.gh-search svg {
+    display: block;
+    stroke: var(--color-text-alt);
+}
+
 @media (max-width: 899px) {
     .gh-head {
         padding-bottom: 1em;
@@ -139,6 +149,13 @@
     .gh-head .nav a {
         padding: 2px 0;
     }
+
+    .gh-search {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 6px;
+    }
 }
 
 @media (min-width: 900px) {
@@ -148,6 +165,15 @@
     }
 
     .gh-head .nav li:not(:first-child) {
+        margin-left: 1em;
+    }
+
+    .gh-nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .gh-search {
         margin-left: 1em;
     }
 }
