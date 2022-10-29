@@ -8,11 +8,21 @@
     {{/if}}
 
     {{#primary_tag}}
-        <span class="tag">{{name}}</span>
+        {{#is "post"}}
+            <a href="{{url}}" title="{{name}}" class="tag tag-{{slug}}">{{name}}</a>
+        {{else}}
+            <span class="tag">{{name}}</span>
+        {{/is}}
     {{/primary_tag}}
 
     {{#if @custom.show_author}}
-        <span>{{primary_author.name}}</span>
+        {{#primary_author}}
+            {{#is "post"}}
+                <a href="{{url}}" title="{{name}}" class="author author-{{slug}}">{{name}}</a>
+            {{else}}
+                <span>{{name}}</span>
+            {{/is}}
+        {{/primary_author}}
     {{/if}}
 
     <time datetime="{{date format="dddd, MMMM Do YYYY, h:mm:ss a"}}">{{date format="D MMM, YYYY"}}</time>
