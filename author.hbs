@@ -4,8 +4,8 @@
     {{#author}}
         <header class="gh-post-head gh-canvas">
             {{#if profile_image}}
-                <div class="author-profile-image" style="background-image: url({{profile_image}});">
-                    <img src="{{profile_image}}" alt="{{name}}" />
+                <div class="author-profile-image" style="background-image: url({{img_url profile_image format="webp"}});">
+                    <img src="{{img_url profile_image format="webp"}}" alt="{{name}}" />
                 </div>
             {{/if}}
 

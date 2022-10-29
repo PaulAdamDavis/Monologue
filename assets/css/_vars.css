@@ -63,7 +63,7 @@ html.theme-dark {
     --color-selection-text: #fff;
     --color-text: #c8c8c8;
     --color-text-header: #fff;
-    --color-text-alt: #666;
+    --color-text-alt: #8d8d8d;
     --color-code-block-bg: #000000;
     --color-code-block-text: #d3d3d3;
     --color-inline-code-border: #3c3c3c;
@@ -87,7 +87,7 @@ html.theme-dark {
         --color-selection-text: #fff;
         --color-text: #dfdfdf;
         --color-text-header: #fff;
-        --color-text-alt: #666;
+        --color-text-alt: #8d8d8d;
         --color-code-block-bg: #000000;
         --color-code-block-text: #d3d3d3;
         --color-inline-code-border: #3c3c3c;
