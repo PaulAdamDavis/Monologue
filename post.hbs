@@ -1,7 +1,7 @@
 {{!< default}}
 
 {{#post}}
-    <article class="gh-post {{post_class}}">
+    <article class="gh-post {{post_class}}" data-tiers="{{#foreach tiers}}{{slug}} {{/foreach}}">
         <header class="gh-post-head gh-canvas">
             {{> "post-meta"}}
 
