@@ -1,19 +1,20 @@
-const {series, watch, src, dest, parallel} = require('gulp');
-const pump = require('pump');
-const del = require('del');
+import gulp from 'gulp';
+const {series, watch, src, dest, parallel} = gulp;
+import pump from 'pump';
+import {deleteAsync} from 'del';
 
 // gulp plugins and utils
-const livereload = require('gulp-livereload');
-const postcss = require('gulp-postcss');
-const zip = require('gulp-zip');
-const uglify = require('gulp-uglify-es').default;
-const beeper = require('beeper');
+import livereload from 'gulp-livereload';
+import postcss from 'gulp-postcss';
+import zip from 'gulp-zip';
+import terser from 'gulp-terser';
+import beeper from 'beeper';
 
 // postcss plugins
-const autoprefixer = require('autoprefixer');
-const colorFunction = require('postcss-color-mod-function');
-const cssnano = require('cssnano');
-const easyimport = require('postcss-easy-import');
+import autoprefixer from 'autoprefixer';
+import colorFunction from 'postcss-color-mod-function';
+import cssnano from 'cssnano';
+import easyimport from 'postcss-easy-import';
 
 function serve(done) {
     livereload.listen();
@@ -30,7 +31,7 @@ const handleError = (done) => {
 };
 
 function cleanBuilt() {
-    return del([
+    return deleteAsync([
         'assets/built/**/*'
     ]);
 }
@@ -61,7 +62,7 @@ function css(done) {
 function js(done) {
     pump([
         src('assets/js/*.js', {sourcemaps: true}),
-        uglify(),
+        terser(),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
     ], handleError(done));
@@ -88,7 +89,11 @@ const hbsWatcher = () => watch(['*.hbs', '**/**/*.hbs', '!node_modules/**/*.hbs'
 const watcher = parallel(cssWatcher, hbsWatcher);
 const build = series(cleanBuilt, css, js);
 const dev = series(build, serve, watcher);
+const zipTask = series(build, zipper);
 
-exports.build = build;
-exports.zip = series(build, zipper);
-exports.default = dev;
+export default dev;
+
+export {
+    build,
+    zipTask as zip
+};
