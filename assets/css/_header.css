@@ -24,7 +24,7 @@
 
 .gh-search svg {
     display: block;
-    stroke: var(--color-text-alt);
+    stroke: var(--color-text);
 }
 
 @media (max-width: 899px) {
@@ -181,7 +181,7 @@
 .gh-head .nav a {
     font-size: 80%;
     font-weight: 700;
-    color: var(--color-text-alt);
+    color: var(--color-text);
 }
 
 .gh-head .nav li.nav-current a {

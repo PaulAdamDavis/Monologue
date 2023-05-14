@@ -83,6 +83,11 @@ is the very first element in the post content */
     margin-top: 6rem;
 }
 
+/* Change heder color */
+.gh-content > :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--color-text-header);
+}
+
 /* Add a small margin between a heading and anything after it */
 .gh-content > :is(h1, h2, h3, h4, h5, h6) + * {
     margin-top: 1rem;
@@ -156,4 +161,9 @@ is the very first element in the post content */
 .gh-content blockquote:not(.kg-blockquote-alt) {
     border-left: 0.2em solid var(--ghost-accent-color);
     padding-left: 1em;
+}
+
+.gh-content .kg-file-card-title + .kg-file-card-caption {
+    margin-top: 2px;
+    margin-bottom: 4px;
 }
