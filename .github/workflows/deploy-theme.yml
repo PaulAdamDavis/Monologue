@@ -13,8 +13,15 @@ jobs:
         with:
           node-version: '18.x'
           cache: 'npm'
-      - run: yarn ci
-      - run: yarn build
+      - run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
+      - run: npm run build
       - name: Deploy site
         uses: TryGhost/action-deploy-theme@v1
         with:
