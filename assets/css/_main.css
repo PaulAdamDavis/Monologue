@@ -9,11 +9,18 @@ body {
     padding: 0;
     background: var(--color-background);
     scroll-behavior: smooth;
+
+    display: flex;
+    flex-direction: column;
 }
 
 
 /* Main
 /* ---------------------------------------------------------- */
+
+main {
+    flex-grow: 2;
+}
 
 .page-footer {
     width: 100%;
