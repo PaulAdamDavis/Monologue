@@ -94,7 +94,7 @@ h6 {
 h1, .h1 {
     line-height: 1.15em;
     font-size: 3rem;
-    font-size: clamp(3rem, calc(5 / 80 * 100vw), 5rem);
+    font-size: clamp(3rem, calc(4.7 / 80 * 100vw), 4.7rem);
 }
 
 h2, .h2 {
