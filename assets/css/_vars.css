@@ -57,8 +57,7 @@
 }
 
 html.theme-dark {
-    /* --color-background: #111111; */
-    --color-background: #1a1f27;
+    --color-background: #181818;
     --color-highlight: #fdffb6;
     --color-selection: #224558;
     --color-selection-text: #fff;
@@ -82,8 +81,7 @@ html.theme-dark {
 
 @media (prefers-color-scheme: dark) {
     html:not(.theme-light):root {
-        /* --color-background: #111111; */
-        --color-background: #1a1f27;
+        --color-background: #181818;
         --color-highlight: #fdffb6;
         --color-selection: #224558;
         --color-selection-text: #fff;
