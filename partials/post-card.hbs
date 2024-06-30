@@ -1,26 +1,31 @@
-<article class="post-card {{post_class}} {{#if feature_image}}has-image{{/if}} {{#if custom_excerpt}}has-custom-excerpt{{else}}no-custom-excerpt{{/if}} gh-canvas">
-    {{#if feature_image}}
-        <a href="{{url}}" class="post-card-image">
-            <img srcset="{{img_url feature_image size="s" format="webp"}} 300w,
-                        {{img_url feature_image size="m" format="webp"}} 600w,
-                        {{img_url feature_image size="l" format="webp"}} 1000w,
-                        {{img_url feature_image size="xl" format="webp"}} 2000w"
-                sizes="(max-width: 1000px) 400px, 800px"
-                src="{{img_url feature_image size="m" format="webp"}}"
-                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                loading="lazy"
-            />
-        </a>
-    {{/if}}
-
-    <a href="{{url}}" class="post-card-inner post-card-text">
-
+<article class="post-card gh-post {{post_class}}">
+    <header class="gh-post-head gh-canvas">
         {{> "post-meta"}}
+        {{> "post-title"}}
 
-        <h2 class="post-card-title h3">
-            {{title}}
-        </h2>
+        {{#if custom_excerpt}}
+            <p class="post-excerpt">{{excerpt}}</p>
+        {{/if}}
 
-        <p class="post-card-excerpt">{{excerpt characters="400"}}</p>
-    </a>
+        {{#if feature_image}}
+            <figure class="kg-card kg-image-card kg-width-wide {{#if feature_image_caption}}kg-card-hascaption{{/if}}">
+                <img
+                    srcset="{{img_url feature_image size="s" format="webp"}} 300w,
+                            {{img_url feature_image size="m" format="webp"}} 600w,
+                            {{img_url feature_image size="l" format="webp"}} 1000w,
+                            {{img_url feature_image size="xl" format="webp"}} 2000w"
+                    sizes="(min-width: 1400px) 1400px, 92vw"
+                    src="{{img_url feature_image size="xl" format="webp"}}"
+                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                />
+                {{#if feature_image_caption}}
+                    <figcaption>{{feature_image_caption}}</figcaption>
+                {{/if}}
+            </figure>
+        {{/if}}
+    </header>
+
+    <div class="gh-content gh-canvas">
+        {{content}}
+    </div>
 </article>

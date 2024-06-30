@@ -1,7 +1,7 @@
 {
     "name": "monologue",
     "description": "A theme for ghost",
-    "version": "1.7.0",
+    "version": "1.8.0",
     "engines": {
         "ghost": ">=5.0.0"
     },
@@ -79,10 +79,6 @@
             "show_author": {
                 "type": "boolean",
                 "default": true
-            },
-            "show_reading_time": {
-                "type": "boolean",
-                "default": false
             },
             "dark_mode_accent_color": {
                 "type": "color",

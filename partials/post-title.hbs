@@ -1,0 +1,16 @@
+<div class="h1 post-title-container">
+    {{#has tag="#link-post"}}
+        {{#if canonical_url}}
+            {{!-- &#9758; is hollow hand pointing to the right --}}
+            <span class="post-title-external-link">&#9758;</span>
+
+            <a href="{{canonical_url}}">
+        {{/if}}
+    {{else}}
+        <a href="{{url}}">
+    {{/has}}
+        <h2 class="h1 post-title">
+            {{title}}
+        </h2>
+    </a>
+</div>

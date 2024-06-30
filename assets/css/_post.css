@@ -10,11 +10,11 @@
 }
 
 .post-meta > :not(svg) + :not(svg):before {
-    content: '\2022';
+    content: '/';
     color: var(--color-text-alt);
+    opacity: 0.5;
     display: inline-block;
-    margin-left: 0.4em;
-    margin-right: 0.4em;
+    margin: 0 0.6em;
 }
 
 .post-meta .icon-lock {
@@ -47,7 +47,7 @@
     height: 16px;
 }
 
-.post-meta + .post-title {
+.post-meta + .post-title-container {
     margin-top: 0.3em;
 }
 
@@ -55,15 +55,33 @@
     color: var(--color-primary);
 }
 
-.post-title {
+.post-title-container {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+
+.post-title-external-link {
+    opacity: 0.5;
+}
+
+@media (min-width: 900px) {
+    .post-title-external-link {
+        position: absolute;
+        left: calc(-1em - 0.2em);
+    }
+}
+
+.post-title-container,
+.post-title-container a {
     color: var(--color-text-header);
 }
 
-.post-title a {
+.post-title-container a {
     color: inherit;
 }
 
-.post-title a:hover {
+.post-title-container a:hover {
     color: var(--ghost-accent-color);
 }
 
@@ -74,7 +92,7 @@
     margin-top: 0.75em;
 }
 
-.post-title + .kg-image-card,
+.post-title-container + .kg-image-card,
 .post-excerpt + .kg-image-card {
     margin-top: 4rem;
 }

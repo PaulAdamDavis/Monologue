@@ -65,7 +65,7 @@
 
 /* Default vertical spacing */
 .gh-content > * + * {
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-bottom: 0;
 }
 
@@ -105,9 +105,12 @@ is the very first element in the post content */
     color: var(--color-text-header);
 }
 
-/* Add a small margin between a heading and anything after it */
-.gh-content > :is(h1, h2, h3, h4, h5, h6) + * {
-    margin-top: 1rem;
+.gh-content > :is(h1, h2, h3, h4, h5, h6) + :is(p, ul, ol, pre, blockquote) {
+    margin-top: 0;
+}
+
+.gh-content > :is(h1, h2, h3, h4, h5, h6) + :is(.kg-card) {
+    margin-top: 2rem;
 }
 
 /* A larger margin before/after HRs and blockquotes */

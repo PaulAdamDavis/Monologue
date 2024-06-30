@@ -25,11 +25,18 @@
         {{/primary_author}}
     {{/if}}
 
-    <time datetime="{{date format="dddd, MMMM Do YYYY, h:mm:ss a"}}">{{date format="D MMM, YYYY"}}</time>
+    <a href="{{url}}">
+        <time datetime="{{date format="dddd, MMMM Do YYYY, h:mm:ss a"}}">{{date format="D MMM, YYYY"}}</time>
+    </a>
 
-    {{#if @custom.show_reading_time}}
-        <span>{{reading_time}}</span>
-    {{/if}}
+    {{^is "post"}}
+        {{#has tag="#link-post"}}
+            {{#if canonical_url}}
+                {{!-- &#9734; is a hollow star --}}
+                <a href="{{url}}">&#9734;</a>
+            {{/if}}
+        {{/has}}
+    {{/is}}
 
     {{comment_count autowrap="span"}}
 </div>
