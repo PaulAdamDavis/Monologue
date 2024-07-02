@@ -37,9 +37,13 @@
                 System theme
             </a>
 
-            <div class="page-footer-nav">
-                {{navigation type="secondary"}}
-            </div>
+            {{#if @site.secondary_navigation}}
+                <div class="page-footer-nav">
+                    {{navigation type="secondary"}}
+                </div>
+            {{else}}
+                <div></div>
+            {{/if}}
 
             <a class="page-footer-ghost" href="https://ghost.org" target="_blank" rel="noopener">Proudly published with Ghost</a>
         </div>
