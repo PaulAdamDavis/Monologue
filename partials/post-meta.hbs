@@ -15,10 +15,8 @@
 
     {{#if @custom.show_author}}
         {{#primary_author}}
-            {{#is "post"}}
+            {{^is "page"}}
                 <a href="{{url}}" title="{{name}}" class="author author-{{slug}}">{{name}}</a>
-            {{else}}
-                <span>{{name}}</span>
             {{/is}}
         {{/primary_author}}
     {{/if}}
