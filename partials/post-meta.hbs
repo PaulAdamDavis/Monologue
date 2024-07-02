@@ -8,10 +8,8 @@
     {{/if}}
 
     {{#primary_tag}}
-        {{#is "post"}}
+        {{^is "page"}}
             <a href="{{url}}" title="{{name}}" class="tag tag-{{slug}}">{{name}}</a>
-        {{else}}
-            <span class="tag">{{name}}</span>
         {{/is}}
     {{/primary_tag}}
 

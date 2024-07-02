@@ -8,6 +8,10 @@
     padding-top: var(--content-margin);
 }
 
+.gh-head-wordmark {
+    margin-right: 1em;
+}
+
 .gh-head-logo {
     display: block;
     margin-right: 1em;
@@ -91,6 +95,7 @@
 
 .gh-head-description {
     font-size: 80%;
+    line-height: 1.4;
     opacity: 0.5;
 }
 

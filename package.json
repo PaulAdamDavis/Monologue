@@ -1,7 +1,7 @@
 {
     "name": "monologue",
     "description": "A theme for ghost",
-    "version": "1.8.0",
+    "version": "1.9.0",
     "engines": {
         "ghost": ">=5.0.0"
     },
@@ -83,6 +83,14 @@
             "dark_mode_accent_color": {
                 "type": "color",
                 "default": "#4983cf"
+            },
+            "sidebar_upper_text": {
+                "type": "text",
+                "default": ""
+            },
+            "sidebar_lower_text": {
+                "type": "text",
+                "default": ""
             }
         }
     }

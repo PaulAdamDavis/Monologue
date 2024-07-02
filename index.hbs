@@ -1,11 +1,13 @@
 {{!< default}}
 
-<div class="gh-container gh-padded">
+<div class="gh-container gh-padded gh-index">
     <div class="gh-postfeed">
         {{#foreach posts visibility="all"}}
             {{> "post-card"}}
         {{/foreach}}
-    </div>
-</div>
 
-{{pagination}}
+        {{pagination}}
+    </div>
+
+    {{> "sidebar"}}
+</div>

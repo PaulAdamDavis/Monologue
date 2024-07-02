@@ -1,0 +1,30 @@
+<div class="gh-sidebar">
+    {{#if @custom.sidebar_upper_text}}
+        <div class="gh-sidebar-section gh-sidebar-intro">
+            {{{@custom.sidebar_upper_text}}}
+        </div>
+    {{/if}}
+
+    {{#get "tags" limit="10" order="count.posts desc" include="count.posts"}}
+        {{#if tags}}
+            <ul class="gh-sidebar-section gh-sidebar-tags-list">
+                {{#foreach tags}}
+                    <li>
+                        <a href="{{url}}">
+                            <span class="tag-name">{{name}} </span>
+                            <span class="tag-count">
+                                <span>{{count.posts}}</span>
+                            </span>
+                        </a>
+                    </li>
+                {{/foreach}}
+            </ul>
+        {{/if}}
+    {{/get}}
+
+    {{#if @custom.sidebar_lower_text}}
+        <div class="gh-sidebar-section gh-sidebar-intro">
+            {{{@custom.sidebar_lower_text}}}
+        </div>
+    {{/if}}
+</div>

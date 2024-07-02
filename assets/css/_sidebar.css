@@ -1,0 +1,68 @@
+.gh-sidebar-section + .gh-sidebar-section {
+    border-top: 1px solid var(--color-border);
+    margin-top: 2em;
+    padding-top: 2em;
+}
+
+.gh-sidebar-intro p {
+    margin-bottom: -0.7em;
+    font-size: 90%;
+    line-height: 1.6;
+}
+
+.gh-sidebar-intro p + p {
+    margin-top: 1.7em;
+}
+
+.gh-sidebar-tags-list {}
+
+.gh-sidebar-tags-list li {
+    margin-bottom: 0.5em;
+}
+
+.gh-sidebar-tags-list a {
+    display: flex;
+    position: relative;
+    padding: 0.2em 0.8em;
+    color: var(--color-text);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.gh-sidebar-tags-list a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-text);
+    opacity: 0.1;
+}
+
+.gh-sidebar-tags-list .tag-name {
+    position: relative;
+}
+
+.gh-sidebar-tags-list .tag-count {
+    background-color: var(--color-text);
+    display: inline-block;
+    padding: 0.2em 0.4em;
+    border-radius: 100px;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    margin-left: auto;
+    position: relative;
+}
+
+.gh-sidebar-tags-list .tag-count span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-background);
+    line-height: 1;
+    font-size: 80%;
+    line-height: 1.4em;
+}

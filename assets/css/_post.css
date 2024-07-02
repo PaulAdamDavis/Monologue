@@ -65,7 +65,7 @@
     opacity: 0.5;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1350px) {
     .post-title-external-link {
         position: absolute;
         left: calc(-1em - 0.2em);
@@ -73,6 +73,7 @@
 }
 
 .post-title-container,
+.post-title,
 .post-title-container a {
     color: var(--color-text-header);
 }
